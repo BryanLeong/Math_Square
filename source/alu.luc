@@ -1,0 +1,45 @@
+module alu (
+    //inputs from mojo_top
+    input a[8],                       //8-bit input a
+    input b[8],                       //8-bit input b
+    input alufn[6],                   //6-bit control signals
+    
+    //outputs to mojo_top
+    output z, output v, output n,     //outputs z, v, n from adder module
+    output result[8]                  //8-bit result from alu
+  ) {
+  
+  //instantiate adder, boolean, shifter and compare components
+  .alufn(alufn) {                     //connect components to 'alufn'
+    compare compare0;
+    
+    .a(a) {                           //connect components to 'a'
+      .b(b) {                         //connect components to 'b'
+        adder adder0;
+        boolean boolean0;
+        shifter shifter0;
+      }
+    }
+  }
+  
+  always {
+    //connect adder z, v and n outputs to respective alu outputs
+    z = adder0.z;
+    v = adder0.v;
+    n = adder0.n;
+    
+    //connect adder z, v and n outputs to respective compare inputs
+    compare0.z = adder0.z;
+    compare0.v = adder0.v;
+    compare0.n = adder0.n;
+    
+    //check which signal should be output based on alufn control signals
+    case(alufn[5:4]) {
+      b00: result = adder0.result;     //connect result of adder component to alu output
+      b01: result = boolean0.result;   //connect result of boolean component to alu output
+      b10: result = shifter0.result;   //connect result of shifer component to alu output
+      b11: result = compare0.result;   //connect result of compare component to alu output
+      default: result = 0;
+    }
+  }
+}

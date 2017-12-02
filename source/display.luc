@@ -1,0 +1,113 @@
+module display (
+    input clk,
+    input rst,
+    input num[3][3][4],
+    input op[6][3],
+    output mosi0,
+    output cs0,
+    output sck0,
+    output mosi1,
+    output cs1,
+    output sck1,
+    output mosi2,
+    output cs2,
+    output sck2
+  ) {
+  
+  .clk(clk) {
+    .rst(rst) {
+      led_matrix mod0(#CLK_DIV(3));
+      led_matrix mod1(#CLK_DIV(6));
+      led_matrix mod2(#CLK_DIV(9));
+      
+      fsm scheduler = {THAW0,THAW1,THAW2};
+    }
+  }
+  
+  const DIGITS = {{5b11111,5b10101,5b11101},  //9
+                  {5b11111,5b10101,5b11111},  //8
+                  {5b11111,5b10000,5b10000},  //7
+                  {5b10111,5b10101,5b11111},  //6
+                  {5b10111,5b10101,5b11101},  //5
+                  {5b11111,5b00100,5b11100},  //4
+                  {5b11111,5b10101,5b10101},  //3
+                  {5b11101,5b10101,5b10111},  //2
+                  {5b00001,5b11111,5b01001},  //1
+                  {5b11111,5b10001,5b11111}}; //0
+                  
+  
+  const OPERATORS = {{5b01010,5b01010,5b01010},  //EQUALS
+                     {5b01000,5b00100,5b00010},  //DIVIDE
+                     {5b01010,5b00100,5b01010},  //MULTIPLY
+                     {5b00100,5b00100,5b00100},  //MINUS
+                     {5b00100,5b01110,5b00100},  //PLUS
+                     {5b00000,5b00000,5b00000}}; //BLANK                     
+    
+  sig col[24][32];
+  var i;
+  
+  always {
+    mosi0 = mod0.mosi;
+    cs0 = mod0.cs;
+    sck0 = mod0.sck;
+    mosi1 = mod1.mosi;
+    cs1 = mod1.cs;
+    sck1 = mod1.sck;
+    mosi2 = mod2.mosi;
+    cs2 = mod2.cs;
+    sck2 = mod2.sck;
+    
+    mod0.thaw = 0;
+    mod1.thaw = 0;
+    mod2.thaw = 0;
+    
+    col[0] = 32b0;
+    col[1] = c{1b0,DIGITS[num[0][0]][0],1b0,OPERATORS[op[1]][0],1b0,DIGITS[num[1][0]][0],1b0,OPERATORS[5][0],1b0,DIGITS[num[2][0]][0],2b0};
+    col[2] = c{1b0,DIGITS[num[0][0]][1],1b0,OPERATORS[op[1]][1],1b0,DIGITS[num[1][0]][1],1b0,OPERATORS[5][1],1b0,DIGITS[num[2][0]][1],2b0};
+    col[3] = c{1b0,DIGITS[num[0][0]][2],1b0,OPERATORS[op[1]][2],1b0,DIGITS[num[1][0]][2],1b0,OPERATORS[5][2],1b0,DIGITS[num[2][0]][2],2b0};
+    col[4] = 32b0;
+    col[5] = c{1b0,OPERATORS[op[1]][0],7b0,OPERATORS[op[4]][0],7b0,OPERATORS[op[5]][0],2b0};
+    col[6] = c{1b0,OPERATORS[op[1]][1],7b0,OPERATORS[op[4]][1],7b0,OPERATORS[op[5]][1],2b0};
+    col[7] = c{1b0,OPERATORS[op[1]][2],7b0,OPERATORS[op[4]][2],7b0,OPERATORS[op[5]][2],2b0};
+    col[8] = 32b0;
+    col[9] = c{1b0,DIGITS[num[0][1]][0],1b0,OPERATORS[op[2]][0],1b0,DIGITS[num[1][1]][0],1b0,OPERATORS[5][0],1b0,DIGITS[num[2][1]][0],2b0};
+    col[10] = c{1b0,DIGITS[num[0][1]][1],1b0,OPERATORS[op[2]][1],1b0,DIGITS[num[1][1]][1],1b0,OPERATORS[5][1],1b0,DIGITS[num[2][1]][1],2b0};
+    col[11] = c{1b0,DIGITS[num[0][1]][2],1b0,OPERATORS[op[2]][2],1b0,DIGITS[num[1][1]][2],1b0,OPERATORS[5][2],1b0,DIGITS[num[2][1]][2],2b0};
+    col[12] = 32b0;
+    col[13] = 32b0;
+    col[14] = c{1b0,OPERATORS[5][0],7b0,OPERATORS[5][0],7b0,OPERATORS[5][0],2b0};
+    col[15] = c{1b0,OPERATORS[5][1],7b0,OPERATORS[5][1],7b0,OPERATORS[5][1],2b0};
+    col[16] = c{1b0,OPERATORS[5][2],7b0,OPERATORS[5][2],7b0,OPERATORS[5][2],2b0};
+    col[17] = 32b0;
+    col[18] = 32b0;
+    col[19] = 32b0;
+    col[20] = c{1b0,DIGITS[num[0][2]][0],1b0,OPERATORS[op[3]][0],1b0,DIGITS[num[1][2]][0],1b0,OPERATORS[5][0],1b0,DIGITS[num[2][2]][0],2b0};
+    col[21] = c{1b0,DIGITS[num[0][2]][1],1b0,OPERATORS[op[3]][1],1b0,DIGITS[num[1][2]][1],1b0,OPERATORS[5][1],1b0,DIGITS[num[2][2]][1],2b0};
+    col[22] = c{1b0,DIGITS[num[0][2]][2],1b0,OPERATORS[op[3]][2],1b0,DIGITS[num[1][2]][2],1b0,OPERATORS[5][2],1b0,DIGITS[num[2][2]][2],2b0};
+    col[23] = 32b0;
+  
+    for (i = 0; i < 8; i++) {
+      mod0.data_in[i] = col[i];
+      mod1.data_in[i] = col[i + 8];
+      mod2.data_in[i] = col[i + 16];
+    }
+    
+    case (scheduler.q) {
+      scheduler.THAW0:
+        if (mod2.frozen == 1) {
+          mod0.thaw = 1;
+          scheduler.d = scheduler.THAW1;
+        }
+      scheduler.THAW1:
+        if (mod0.frozen == 1) {
+          mod1.thaw = 1;
+          scheduler.d = scheduler.THAW2;
+        }
+      scheduler.THAW2:
+        if (mod1.frozen == 1) {
+          mod2.thaw = 1;
+          scheduler.d = scheduler.THAW0;
+        }
+    }
+  }
+}

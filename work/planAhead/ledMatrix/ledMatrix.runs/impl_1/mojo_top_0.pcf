@@ -1,0 +1,195 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Dec 01 02:18:56 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "cs0" LOCATE = SITE "P32" LEVEL 1;
+COMP "cs1" LOCATE = SITE "P7" LEVEL 1;
+COMP "cs2" LOCATE = SITE "P126" LEVEL 1;
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "cclk" LOCATE = SITE "P70" LEVEL 1;
+COMP "sck0" LOCATE = SITE "P29" LEVEL 1;
+COMP "sck1" LOCATE = SITE "P5" LEVEL 1;
+COMP "sck2" LOCATE = SITE "P123" LEVEL 1;
+COMP "mosi0" LOCATE = SITE "P34" LEVEL 1;
+COMP "mosi1" LOCATE = SITE "P9" LEVEL 1;
+COMP "mosi2" LOCATE = SITE "P131" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
+COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
+COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
+COMP "led[0]" LOCATE = SITE "P134" LEVEL 1;
+COMP "led[1]" LOCATE = SITE "P133" LEVEL 1;
+COMP "led[2]" LOCATE = SITE "P132" LEVEL 1;
+COMP "led[4]" LOCATE = SITE "P127" LEVEL 1;
+COMP "led[6]" LOCATE = SITE "P124" LEVEL 1;
+COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
+COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
+COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
+TIMEGRP clk = BEL "display/M_scheduler_q_FSM_FFd1" BEL
+        "display/M_scheduler_q_FSM_FFd2" BEL "display/mod0/M_state_q_FSM_FFd1"
+        BEL "display/mod0/M_state_q_FSM_FFd2" BEL
+        "display/mod0/M_state_q_FSM_FFd3" BEL
+        "display/mod0/M_state_q_FSM_FFd4" BEL "display/mod0/M_data_reg_q_54"
+        BEL "display/mod0/M_data_reg_q_53" BEL "display/mod0/M_data_reg_q_52"
+        BEL "display/mod0/M_data_reg_q_51" BEL "display/mod0/M_data_reg_q_50"
+        BEL "display/mod0/M_data_reg_q_48" BEL "display/mod0/M_data_reg_q_39"
+        BEL "display/mod0/M_data_reg_q_33" BEL "display/mod0/M_data_reg_q_32"
+        BEL "display/mod0/M_data_reg_q_23" BEL "display/mod0/M_data_reg_q_11"
+        BEL "display/mod0/M_data_reg_q_10" BEL "display/mod0/M_data_reg_q_9"
+        BEL "display/mod0/M_data_reg_q_8" BEL "display/mod0/M_data_reg_q_5"
+        BEL "display/mod0/M_data_reg_q_4" BEL "display/mod0/M_data_reg_q_3"
+        BEL "display/mod0/M_data_reg_q_1" BEL "display/mod0/M_line_q_2" BEL
+        "display/mod0/M_line_q_1" BEL "display/mod0/M_line_q_0" BEL
+        "display/mod0/spi/M_ctr_q_5" BEL "display/mod0/spi/M_ctr_q_4" BEL
+        "display/mod0/spi/M_ctr_q_3" BEL "display/mod0/spi/M_ctr_q_2" BEL
+        "display/mod0/spi/M_ctr_q_1" BEL "display/mod0/spi/M_ctr_q_0" BEL
+        "display/mod0/spi/M_sck_reg_q_2" BEL "display/mod0/spi/M_sck_reg_q_1"
+        BEL "display/mod0/spi/M_sck_reg_q_0" BEL "display/mod0/spi/M_state_q"
+        BEL "display/mod0/spi/M_mosi_reg_q" BEL "display/mod0/spi/M_data_q_63"
+        BEL "display/mod0/spi/M_data_q_62" BEL "display/mod0/spi/M_data_q_61"
+        BEL "display/mod0/spi/M_data_q_60" BEL "display/mod0/spi/M_data_q_59"
+        BEL "display/mod0/spi/M_data_q_58" BEL "display/mod0/spi/M_data_q_57"
+        BEL "display/mod0/spi/M_data_q_56" BEL "display/mod0/spi/M_data_q_55"
+        BEL "display/mod0/spi/M_data_q_54" BEL "display/mod0/spi/M_data_q_53"
+        BEL "display/mod0/spi/M_data_q_52" BEL "display/mod0/spi/M_data_q_51"
+        BEL "display/mod0/spi/M_data_q_50" BEL "display/mod0/spi/M_data_q_49"
+        BEL "display/mod0/spi/M_data_q_48" BEL "display/mod0/spi/M_data_q_47"
+        BEL "display/mod0/spi/M_data_q_46" BEL "display/mod0/spi/M_data_q_45"
+        BEL "display/mod0/spi/M_data_q_44" BEL "display/mod0/spi/M_data_q_43"
+        BEL "display/mod0/spi/M_data_q_42" BEL "display/mod0/spi/M_data_q_41"
+        BEL "display/mod0/spi/M_data_q_40" BEL "display/mod0/spi/M_data_q_39"
+        BEL "display/mod0/spi/M_data_q_38" BEL "display/mod0/spi/M_data_q_37"
+        BEL "display/mod0/spi/M_data_q_36" BEL "display/mod0/spi/M_data_q_35"
+        BEL "display/mod0/spi/M_data_q_34" BEL "display/mod0/spi/M_data_q_33"
+        BEL "display/mod0/spi/M_data_q_32" BEL "display/mod0/spi/M_data_q_31"
+        BEL "display/mod0/spi/M_data_q_30" BEL "display/mod0/spi/M_data_q_29"
+        BEL "display/mod0/spi/M_data_q_28" BEL "display/mod0/spi/M_data_q_27"
+        BEL "display/mod0/spi/M_data_q_26" BEL "display/mod0/spi/M_data_q_25"
+        BEL "display/mod0/spi/M_data_q_24" BEL "display/mod0/spi/M_data_q_23"
+        BEL "display/mod0/spi/M_data_q_22" BEL "display/mod0/spi/M_data_q_21"
+        BEL "display/mod0/spi/M_data_q_20" BEL "display/mod0/spi/M_data_q_19"
+        BEL "display/mod0/spi/M_data_q_18" BEL "display/mod0/spi/M_data_q_17"
+        BEL "display/mod0/spi/M_data_q_16" BEL "display/mod0/spi/M_data_q_15"
+        BEL "display/mod0/spi/M_data_q_14" BEL "display/mod0/spi/M_data_q_13"
+        BEL "display/mod0/spi/M_data_q_12" BEL "display/mod0/spi/M_data_q_11"
+        BEL "display/mod0/spi/M_data_q_10" BEL "display/mod0/spi/M_data_q_9"
+        BEL "display/mod0/spi/M_data_q_8" BEL "display/mod0/spi/M_data_q_7"
+        BEL "display/mod0/spi/M_data_q_6" BEL "display/mod0/spi/M_data_q_5"
+        BEL "display/mod0/spi/M_data_q_4" BEL "display/mod0/spi/M_data_q_3"
+        BEL "display/mod0/spi/M_data_q_2" BEL "display/mod0/spi/M_data_q_1"
+        BEL "display/mod0/spi/M_data_q_0" BEL
+        "display/mod1/M_state_q_FSM_FFd1" BEL
+        "display/mod1/M_state_q_FSM_FFd2" BEL
+        "display/mod1/M_state_q_FSM_FFd3" BEL
+        "display/mod1/M_state_q_FSM_FFd4" BEL "display/mod1/M_data_reg_q_54"
+        BEL "display/mod1/M_data_reg_q_53" BEL "display/mod1/M_data_reg_q_52"
+        BEL "display/mod1/M_data_reg_q_51" BEL "display/mod1/M_data_reg_q_50"
+        BEL "display/mod1/M_data_reg_q_48" BEL "display/mod1/M_data_reg_q_34"
+        BEL "display/mod1/M_data_reg_q_33" BEL "display/mod1/M_data_reg_q_32"
+        BEL "display/mod1/M_data_reg_q_11" BEL "display/mod1/M_data_reg_q_10"
+        BEL "display/mod1/M_data_reg_q_9" BEL "display/mod1/M_data_reg_q_8"
+        BEL "display/mod1/M_data_reg_q_6" BEL "display/mod1/M_data_reg_q_5"
+        BEL "display/mod1/M_data_reg_q_3" BEL "display/mod1/M_data_reg_q_1"
+        BEL "display/mod1/M_line_q_2" BEL "display/mod1/M_line_q_1" BEL
+        "display/mod1/M_line_q_0" BEL "display/mod1/M_data_reg_q_10_1" BEL
+        "display/mod1/M_data_reg_q_9_1" BEL "display/mod1/M_data_reg_q_11_1"
+        BEL "display/mod1/M_data_reg_q_8_1" BEL
+        "display/mod1/spi/M_sck_reg_q_5" BEL "display/mod1/spi/M_sck_reg_q_4"
+        BEL "display/mod1/spi/M_sck_reg_q_3" BEL
+        "display/mod1/spi/M_sck_reg_q_2" BEL "display/mod1/spi/M_sck_reg_q_1"
+        BEL "display/mod1/spi/M_sck_reg_q_0" BEL "display/mod1/spi/M_ctr_q_5"
+        BEL "display/mod1/spi/M_ctr_q_4" BEL "display/mod1/spi/M_ctr_q_3" BEL
+        "display/mod1/spi/M_ctr_q_2" BEL "display/mod1/spi/M_ctr_q_1" BEL
+        "display/mod1/spi/M_ctr_q_0" BEL "display/mod1/spi/M_state_q" BEL
+        "display/mod1/spi/M_mosi_reg_q" BEL "display/mod1/spi/M_data_q_63" BEL
+        "display/mod1/spi/M_data_q_62" BEL "display/mod1/spi/M_data_q_61" BEL
+        "display/mod1/spi/M_data_q_60" BEL "display/mod1/spi/M_data_q_59" BEL
+        "display/mod1/spi/M_data_q_58" BEL "display/mod1/spi/M_data_q_57" BEL
+        "display/mod1/spi/M_data_q_56" BEL "display/mod1/spi/M_data_q_55" BEL
+        "display/mod1/spi/M_data_q_54" BEL "display/mod1/spi/M_data_q_53" BEL
+        "display/mod1/spi/M_data_q_52" BEL "display/mod1/spi/M_data_q_51" BEL
+        "display/mod1/spi/M_data_q_50" BEL "display/mod1/spi/M_data_q_49" BEL
+        "display/mod1/spi/M_data_q_48" BEL "display/mod1/spi/M_data_q_47" BEL
+        "display/mod1/spi/M_data_q_46" BEL "display/mod1/spi/M_data_q_45" BEL
+        "display/mod1/spi/M_data_q_44" BEL "display/mod1/spi/M_data_q_43" BEL
+        "display/mod1/spi/M_data_q_42" BEL "display/mod1/spi/M_data_q_41" BEL
+        "display/mod1/spi/M_data_q_40" BEL "display/mod1/spi/M_data_q_39" BEL
+        "display/mod1/spi/M_data_q_38" BEL "display/mod1/spi/M_data_q_37" BEL
+        "display/mod1/spi/M_data_q_36" BEL "display/mod1/spi/M_data_q_35" BEL
+        "display/mod1/spi/M_data_q_34" BEL "display/mod1/spi/M_data_q_33" BEL
+        "display/mod1/spi/M_data_q_32" BEL "display/mod1/spi/M_data_q_31" BEL
+        "display/mod1/spi/M_data_q_30" BEL "display/mod1/spi/M_data_q_29" BEL
+        "display/mod1/spi/M_data_q_28" BEL "display/mod1/spi/M_data_q_27" BEL
+        "display/mod1/spi/M_data_q_26" BEL "display/mod1/spi/M_data_q_25" BEL
+        "display/mod1/spi/M_data_q_24" BEL "display/mod1/spi/M_data_q_23" BEL
+        "display/mod1/spi/M_data_q_22" BEL "display/mod1/spi/M_data_q_21" BEL
+        "display/mod1/spi/M_data_q_20" BEL "display/mod1/spi/M_data_q_19" BEL
+        "display/mod1/spi/M_data_q_18" BEL "display/mod1/spi/M_data_q_17" BEL
+        "display/mod1/spi/M_data_q_16" BEL "display/mod1/spi/M_data_q_15" BEL
+        "display/mod1/spi/M_data_q_14" BEL "display/mod1/spi/M_data_q_13" BEL
+        "display/mod1/spi/M_data_q_12" BEL "display/mod1/spi/M_data_q_11" BEL
+        "display/mod1/spi/M_data_q_10" BEL "display/mod1/spi/M_data_q_9" BEL
+        "display/mod1/spi/M_data_q_8" BEL "display/mod1/spi/M_data_q_7" BEL
+        "display/mod1/spi/M_data_q_6" BEL "display/mod1/spi/M_data_q_5" BEL
+        "display/mod1/spi/M_data_q_4" BEL "display/mod1/spi/M_data_q_3" BEL
+        "display/mod1/spi/M_data_q_2" BEL "display/mod1/spi/M_data_q_1" BEL
+        "display/mod1/spi/M_data_q_0" BEL "display/mod2/M_state_q_FSM_FFd1"
+        BEL "display/mod2/M_state_q_FSM_FFd2" BEL
+        "display/mod2/M_state_q_FSM_FFd3" BEL
+        "display/mod2/M_state_q_FSM_FFd4" BEL "display/mod2/M_data_reg_q_54"
+        BEL "display/mod2/M_data_reg_q_53" BEL "display/mod2/M_data_reg_q_51"
+        BEL "display/mod2/M_data_reg_q_50" BEL "display/mod2/M_data_reg_q_48"
+        BEL "display/mod2/M_data_reg_q_34" BEL "display/mod2/M_data_reg_q_33"
+        BEL "display/mod2/M_data_reg_q_32" BEL "display/mod2/M_data_reg_q_23"
+        BEL "display/mod2/M_data_reg_q_11" BEL "display/mod2/M_data_reg_q_10"
+        BEL "display/mod2/M_data_reg_q_9" BEL "display/mod2/M_data_reg_q_8"
+        BEL "display/mod2/M_data_reg_q_1" BEL "display/mod2/M_line_q_2" BEL
+        "display/mod2/M_line_q_1" BEL "display/mod2/M_line_q_0" BEL
+        "display/mod2/spi/M_sck_reg_q_8" BEL "display/mod2/spi/M_sck_reg_q_7"
+        BEL "display/mod2/spi/M_sck_reg_q_6" BEL
+        "display/mod2/spi/M_sck_reg_q_5" BEL "display/mod2/spi/M_sck_reg_q_4"
+        BEL "display/mod2/spi/M_sck_reg_q_3" BEL
+        "display/mod2/spi/M_sck_reg_q_2" BEL "display/mod2/spi/M_sck_reg_q_1"
+        BEL "display/mod2/spi/M_sck_reg_q_0" BEL "display/mod2/spi/M_ctr_q_5"
+        BEL "display/mod2/spi/M_ctr_q_4" BEL "display/mod2/spi/M_ctr_q_3" BEL
+        "display/mod2/spi/M_ctr_q_2" BEL "display/mod2/spi/M_ctr_q_1" BEL
+        "display/mod2/spi/M_ctr_q_0" BEL "display/mod2/spi/M_state_q" BEL
+        "display/mod2/spi/M_mosi_reg_q" BEL "display/mod2/spi/M_data_q_63" BEL
+        "display/mod2/spi/M_data_q_62" BEL "display/mod2/spi/M_data_q_61" BEL
+        "display/mod2/spi/M_data_q_60" BEL "display/mod2/spi/M_data_q_59" BEL
+        "display/mod2/spi/M_data_q_58" BEL "display/mod2/spi/M_data_q_57" BEL
+        "display/mod2/spi/M_data_q_56" BEL "display/mod2/spi/M_data_q_55" BEL
+        "display/mod2/spi/M_data_q_54" BEL "display/mod2/spi/M_data_q_53" BEL
+        "display/mod2/spi/M_data_q_52" BEL "display/mod2/spi/M_data_q_51" BEL
+        "display/mod2/spi/M_data_q_50" BEL "display/mod2/spi/M_data_q_49" BEL
+        "display/mod2/spi/M_data_q_48" BEL "display/mod2/spi/M_data_q_47" BEL
+        "display/mod2/spi/M_data_q_46" BEL "display/mod2/spi/M_data_q_45" BEL
+        "display/mod2/spi/M_data_q_44" BEL "display/mod2/spi/M_data_q_43" BEL
+        "display/mod2/spi/M_data_q_42" BEL "display/mod2/spi/M_data_q_41" BEL
+        "display/mod2/spi/M_data_q_40" BEL "display/mod2/spi/M_data_q_39" BEL
+        "display/mod2/spi/M_data_q_38" BEL "display/mod2/spi/M_data_q_37" BEL
+        "display/mod2/spi/M_data_q_36" BEL "display/mod2/spi/M_data_q_35" BEL
+        "display/mod2/spi/M_data_q_34" BEL "display/mod2/spi/M_data_q_33" BEL
+        "display/mod2/spi/M_data_q_32" BEL "display/mod2/spi/M_data_q_31" BEL
+        "display/mod2/spi/M_data_q_30" BEL "display/mod2/spi/M_data_q_29" BEL
+        "display/mod2/spi/M_data_q_28" BEL "display/mod2/spi/M_data_q_27" BEL
+        "display/mod2/spi/M_data_q_26" BEL "display/mod2/spi/M_data_q_25" BEL
+        "display/mod2/spi/M_data_q_24" BEL "display/mod2/spi/M_data_q_23" BEL
+        "display/mod2/spi/M_data_q_22" BEL "display/mod2/spi/M_data_q_21" BEL
+        "display/mod2/spi/M_data_q_20" BEL "display/mod2/spi/M_data_q_19" BEL
+        "display/mod2/spi/M_data_q_18" BEL "display/mod2/spi/M_data_q_17" BEL
+        "display/mod2/spi/M_data_q_16" BEL "display/mod2/spi/M_data_q_15" BEL
+        "display/mod2/spi/M_data_q_14" BEL "display/mod2/spi/M_data_q_13" BEL
+        "display/mod2/spi/M_data_q_12" BEL "display/mod2/spi/M_data_q_11" BEL
+        "display/mod2/spi/M_data_q_10" BEL "display/mod2/spi/M_data_q_9" BEL
+        "display/mod2/spi/M_data_q_8" BEL "display/mod2/spi/M_data_q_7" BEL
+        "display/mod2/spi/M_data_q_6" BEL "display/mod2/spi/M_data_q_5" BEL
+        "display/mod2/spi/M_data_q_4" BEL "display/mod2/spi/M_data_q_3" BEL
+        "display/mod2/spi/M_data_q_2" BEL "display/mod2/spi/M_data_q_1" BEL
+        "display/mod2/spi/M_data_q_0" BEL "clk_BUFGP/BUFG" BEL
+        "reset_cond/M_stage_q_3" BEL "reset_cond/M_stage_q_2" BEL
+        "reset_cond/M_stage_q_1" BEL "reset_cond/M_stage_q_0";
+TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

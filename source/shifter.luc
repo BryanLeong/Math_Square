@@ -1,0 +1,17 @@
+module shifter (
+    input a[8],                       //number to be shifted
+    input b[8],                       //digits to shift input a by(max 7)
+    input alufn[6],                   //control signals
+    
+    output result[8]                  //shifted number
+  ) {
+
+  always {
+    case(alufn[1:0]) {                //check which operation to perform
+      b00: result = a << b[2:0];      //left shift
+      b01: result = a >> b[2:0];      //right shift
+      b11: result = $signed(a) >>> b[2:0];     //arithmetic right shift
+      default: result = a;            //no shift
+    }
+  }
+}

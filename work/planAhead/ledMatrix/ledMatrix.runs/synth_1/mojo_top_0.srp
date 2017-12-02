@@ -1,0 +1,921 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> Reading design: mojo_top_0.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top_0.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx9tqg144-2
+Output File Name                   : "mojo_top_0.ngc"
+
+---- Source Options
+Top Module Name                    : mojo_top_0
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/spi_master_8.v" into library work
+Parsing module <spi_master_8>.
+Analyzing Verilog file "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/spi_master_7.v" into library work
+Parsing module <spi_master_7>.
+Analyzing Verilog file "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/spi_master_6.v" into library work
+Parsing module <spi_master_6>.
+Analyzing Verilog file "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_5.v" into library work
+Parsing module <led_matrix_5>.
+Analyzing Verilog file "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_4.v" into library work
+Parsing module <led_matrix_4>.
+Analyzing Verilog file "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_3.v" into library work
+Parsing module <led_matrix_3>.
+Analyzing Verilog file "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/reset_conditioner_2.v" into library work
+Parsing module <reset_conditioner_2>.
+Analyzing Verilog file "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/display_1.v" into library work
+Parsing module <display_1>.
+Analyzing Verilog file "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Parsing module <mojo_top_0>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top_0>.
+
+Elaborating module <display_1>.
+
+Elaborating module <led_matrix_3>.
+
+Elaborating module <spi_master_6>.
+WARNING:HDLCompiler:1127 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_3.v" Line 61: Assignment to M_spi_data_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_3.v" Line 62: Assignment to M_spi_new_data ignored, since the identifier is never used
+
+Elaborating module <led_matrix_4>.
+
+Elaborating module <spi_master_7>.
+WARNING:HDLCompiler:1127 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_4.v" Line 61: Assignment to M_spi_data_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_4.v" Line 62: Assignment to M_spi_new_data ignored, since the identifier is never used
+
+Elaborating module <led_matrix_5>.
+
+Elaborating module <spi_master_8>.
+WARNING:HDLCompiler:1127 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_5.v" Line 61: Assignment to M_spi_data_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_5.v" Line 62: Assignment to M_spi_new_data ignored, since the identifier is never used
+
+Elaborating module <reset_conditioner_2>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top_0>.
+    Related source file is "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/mojo_top_0.v".
+WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 69
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 69
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 69
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 69
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 69
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 69
+    Summary:
+	inferred   6 Tristate(s).
+Unit <mojo_top_0> synthesized.
+
+Synthesizing Unit <display_1>.
+    Related source file is "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/display_1.v".
+WARNING:Xst:647 - Input <op<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <M_scheduler_q>.
+    Found finite state machine <FSM_0> for signal <M_scheduler_q>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <num[3]_GND_2_o_add_1_OUT> created at line 103.
+    Found 8-bit adder for signal <num[15]_GND_2_o_add_7_OUT> created at line 103.
+    Found 8-bit adder for signal <num[27]_GND_2_o_add_10_OUT> created at line 103.
+    Found 7-bit adder for signal <op[5]_GND_2_o_add_45_OUT> created at line 107.
+    Found 7-bit adder for signal <op[14]_GND_2_o_add_48_OUT> created at line 107.
+    Found 8-bit adder for signal <num[7]_GND_2_o_add_78_OUT> created at line 111.
+    Found 7-bit adder for signal <op[8]_GND_2_o_add_81_OUT> created at line 111.
+    Found 8-bit adder for signal <num[31]_GND_2_o_add_87_OUT> created at line 111.
+    Found 8-bit adder for signal <num[11]_GND_2_o_add_122_OUT> created at line 122.
+    Found 9-bit adder for signal <n0204> created at line 104.
+    Found 9-bit adder for signal <n0211> created at line 105.
+    Found 9-bit adder for signal <n0206> created at line 112.
+    Found 9-bit adder for signal <n0214> created at line 113.
+    Found 9-bit adder for signal <n0208> created at line 123.
+    Found 9-bit adder for signal <n0217> created at line 124.
+    Found 8-bit adder for signal <n0222> created at line 108.
+    Found 8-bit adder for signal <n0229> created at line 109.
+    Found 8-bit adder for signal <n0224> created at line 108.
+    Found 8-bit adder for signal <n0232> created at line 109.
+    Found 9-bit adder for signal <n0241> created at line 112.
+    Found 9-bit adder for signal <n0250> created at line 113.
+    Found 8-bit adder for signal <n0243> created at line 123.
+    Found 8-bit adder for signal <n0253> created at line 124.
+    Found 9-bit adder for signal <n0247> created at line 123.
+    Found 9-bit adder for signal <n0259> created at line 124.
+    Found 9-bit adder for signal <n0265> created at line 123.
+    Found 9-bit adder for signal <n0274> created at line 124.
+    Found 299-bit shifter logical right for signal <n0197> created at line 103
+    Found 299-bit shifter logical right for signal <n0198> created at line 111
+    Found 299-bit shifter logical right for signal <n0199> created at line 122
+    Found 299-bit shifter logical right for signal <n0194> created at line 104
+    Found 299-bit shifter logical right for signal <n0195> created at line 112
+    Found 299-bit shifter logical right for signal <n0196> created at line 123
+    Found 4x4-bit multiplier for signal <n0319> created at line 105.
+    Found 299-bit shifter logical right for signal <n0191> created at line 105
+    Found 4x4-bit multiplier for signal <n0321> created at line 105.
+    Found 299-bit shifter logical right for signal <n0192> created at line 113
+    Found 4x4-bit multiplier for signal <n0323> created at line 105.
+    Found 299-bit shifter logical right for signal <n0193> created at line 124
+    Found 179-bit shifter logical right for signal <n0188> created at line 107
+    Found 179-bit shifter logical right for signal <n0189> created at line 107
+    Found 179-bit shifter logical right for signal <n0185> created at line 108
+    Found 179-bit shifter logical right for signal <n0186> created at line 108
+    Found 3x4-bit multiplier for signal <n0349> created at line 109.
+    Found 179-bit shifter logical right for signal <n0182> created at line 109
+    Found 3x4-bit multiplier for signal <n0351> created at line 109.
+    Found 179-bit shifter logical right for signal <n0183> created at line 109
+    Found 299-bit shifter logical right for signal <n0178> created at line 111
+    Found 179-bit shifter logical right for signal <n0179> created at line 122
+    Found 299-bit shifter logical right for signal <n0181> created at line 122
+    Found 299-bit shifter logical right for signal <n0174> created at line 112
+    Found 179-bit shifter logical right for signal <n0175> created at line 123
+    Found 299-bit shifter logical right for signal <n0177> created at line 123
+    Found 4x4-bit multiplier for signal <n0379> created at line 113.
+    Found 299-bit shifter logical right for signal <n0170> created at line 113
+    Found 3x4-bit multiplier for signal <n0381> created at line 113.
+    Found 179-bit shifter logical right for signal <n0171> created at line 124
+    Found 4x4-bit multiplier for signal <n0385> created at line 113.
+    Found 299-bit shifter logical right for signal <n0173> created at line 124
+    Found 299-bit shifter logical right for signal <n0166> created at line 122
+    Found 299-bit shifter logical right for signal <n0162> created at line 123
+    Found 4x4-bit multiplier for signal <n0419> created at line 124.
+    Found 299-bit shifter logical right for signal <n0158> created at line 124
+    Summary:
+	inferred   9 Multiplier(s).
+	inferred  27 Adder/Subtractor(s).
+	inferred   3 Multiplexer(s).
+	inferred  27 Combinational logic shifter(s).
+	inferred   1 Finite State Machine(s).
+Unit <display_1> synthesized.
+
+Synthesizing Unit <led_matrix_3>.
+    Related source file is "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_3.v".
+INFO:Xst:3210 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_3.v" line 53: Output port <data_out> of the instance <spi> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_3.v" line 53: Output port <new_data> of the instance <spi> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <M_line_q>.
+    Found 4-bit register for signal <M_state_q>.
+    Found 64-bit register for signal <M_data_reg_q>.
+    Found finite state machine <FSM_1> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 15                                             |
+    | Transitions        | 42                                             |
+    | Inputs             | 16                                             |
+    | Outputs            | 49                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <M_line_q[2]_GND_3_o_add_2_OUT> created at line 84.
+    Found 6-bit adder for signal <M_line_q[2]_GND_3_o_add_14_OUT> created at line 87.
+    Found 3-bit adder for signal <M_line_q[2]_GND_3_o_add_62_OUT> created at line 235.
+    Found 9-bit adder for signal <n0106> created at line 85.
+    Found 9-bit adder for signal <n0108> created at line 86.
+    Found 9-bit adder for signal <n0111> created at line 87.
+    Found 511-bit shifter logical right for signal <n0103> created at line 84
+    Found 511-bit shifter logical right for signal <n0102> created at line 85
+    Found 511-bit shifter logical right for signal <n0101> created at line 86
+    Found 127-bit shifter logical right for signal <n0099> created at line 87
+    Found 511-bit shifter logical right for signal <n0100> created at line 87
+    Found 1-bit 15-to-1 multiplexer for signal <M_spi_start> created at line 89.
+    Found 1-bit tristate buffer for signal <M_spi_miso> created at line 72
+    Found 64-bit comparator not equal for signal <n0067> created at line 223
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   5 Combinational logic shifter(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <led_matrix_3> synthesized.
+
+Synthesizing Unit <spi_master_6>.
+    Related source file is "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/spi_master_6.v".
+    Found 3-bit register for signal <M_sck_reg_q>.
+    Found 1-bit register for signal <M_mosi_reg_q>.
+    Found 6-bit register for signal <M_ctr_q>.
+    Found 1-bit register for signal <busy>.
+    Found 64-bit register for signal <M_data_q>.
+    Found 3-bit adder for signal <M_sck_reg_q[2]_GND_4_o_add_3_OUT> created at line 65.
+    Found 6-bit adder for signal <M_ctr_q[5]_GND_4_o_add_7_OUT> created at line 73.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  75 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <spi_master_6> synthesized.
+
+Synthesizing Unit <led_matrix_4>.
+    Related source file is "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_4.v".
+INFO:Xst:3210 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_4.v" line 53: Output port <data_out> of the instance <spi> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_4.v" line 53: Output port <new_data> of the instance <spi> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <M_line_q>.
+    Found 4-bit register for signal <M_state_q>.
+    Found 64-bit register for signal <M_data_reg_q>.
+    Found finite state machine <FSM_2> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 15                                             |
+    | Transitions        | 42                                             |
+    | Inputs             | 16                                             |
+    | Outputs            | 49                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <M_line_q[2]_GND_6_o_add_2_OUT> created at line 84.
+    Found 6-bit adder for signal <M_line_q[2]_GND_6_o_add_14_OUT> created at line 87.
+    Found 3-bit adder for signal <M_line_q[2]_GND_6_o_add_62_OUT> created at line 235.
+    Found 9-bit adder for signal <n0111> created at line 87.
+    Found 9-bit adder for signal <n0106> created at line 85.
+    Found 9-bit adder for signal <n0108> created at line 86.
+    Found 511-bit shifter logical right for signal <n0103> created at line 84
+    Found 511-bit shifter logical right for signal <n0102> created at line 85
+    Found 511-bit shifter logical right for signal <n0101> created at line 86
+    Found 127-bit shifter logical right for signal <n0099> created at line 87
+    Found 511-bit shifter logical right for signal <n0100> created at line 87
+    Found 1-bit 15-to-1 multiplexer for signal <M_spi_start> created at line 89.
+    Found 1-bit tristate buffer for signal <M_spi_miso> created at line 72
+    Found 64-bit comparator not equal for signal <n0067> created at line 223
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   5 Combinational logic shifter(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <led_matrix_4> synthesized.
+
+Synthesizing Unit <spi_master_7>.
+    Related source file is "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/spi_master_7.v".
+    Found 6-bit register for signal <M_sck_reg_q>.
+    Found 1-bit register for signal <M_mosi_reg_q>.
+    Found 6-bit register for signal <M_ctr_q>.
+    Found 1-bit register for signal <busy>.
+    Found 64-bit register for signal <M_data_q>.
+    Found 6-bit adder for signal <M_sck_reg_q[5]_GND_7_o_add_3_OUT> created at line 65.
+    Found 6-bit adder for signal <M_ctr_q[5]_GND_7_o_add_7_OUT> created at line 73.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  78 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <spi_master_7> synthesized.
+
+Synthesizing Unit <led_matrix_5>.
+    Related source file is "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_5.v".
+INFO:Xst:3210 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_5.v" line 53: Output port <data_out> of the instance <spi> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/led_matrix_5.v" line 53: Output port <new_data> of the instance <spi> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <M_line_q>.
+    Found 4-bit register for signal <M_state_q>.
+    Found 64-bit register for signal <M_data_reg_q>.
+    Found finite state machine <FSM_3> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 15                                             |
+    | Transitions        | 42                                             |
+    | Inputs             | 16                                             |
+    | Outputs            | 49                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <M_line_q[2]_GND_9_o_add_2_OUT> created at line 84.
+    Found 6-bit adder for signal <M_line_q[2]_GND_9_o_add_14_OUT> created at line 87.
+    Found 3-bit adder for signal <M_line_q[2]_GND_9_o_add_62_OUT> created at line 235.
+    Found 9-bit adder for signal <n0106> created at line 85.
+    Found 9-bit adder for signal <n0108> created at line 86.
+    Found 9-bit adder for signal <n0111> created at line 87.
+    Found 511-bit shifter logical right for signal <n0103> created at line 84
+    Found 511-bit shifter logical right for signal <n0102> created at line 85
+    Found 511-bit shifter logical right for signal <n0101> created at line 86
+    Found 127-bit shifter logical right for signal <n0099> created at line 87
+    Found 511-bit shifter logical right for signal <n0100> created at line 87
+    Found 1-bit 15-to-1 multiplexer for signal <M_spi_start> created at line 89.
+    Found 1-bit tristate buffer for signal <M_spi_miso> created at line 72
+    Found 64-bit comparator not equal for signal <n0067> created at line 223
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   5 Combinational logic shifter(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <led_matrix_5> synthesized.
+
+Synthesizing Unit <spi_master_8>.
+    Related source file is "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/spi_master_8.v".
+    Found 9-bit register for signal <M_sck_reg_q>.
+    Found 1-bit register for signal <M_mosi_reg_q>.
+    Found 6-bit register for signal <M_ctr_q>.
+    Found 1-bit register for signal <busy>.
+    Found 64-bit register for signal <M_data_q>.
+    Found 9-bit adder for signal <M_sck_reg_q[8]_GND_10_o_add_3_OUT> created at line 65.
+    Found 6-bit adder for signal <M_ctr_q[5]_GND_10_o_add_7_OUT> created at line 73.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  81 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <spi_master_8> synthesized.
+
+Synthesizing Unit <reset_conditioner_2>.
+    Related source file is "D:/Bryan/Documents/50.002/mojo-ide-B1.3.6/Projects/ledMatrix/work/planAhead/ledMatrix/ledMatrix.srcs/sources_1/imports/verilog/reset_conditioner_2.v".
+    Found 4-bit register for signal <M_stage_q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <reset_conditioner_2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 9
+ 4x3-bit multiplier                                    : 3
+ 4x4-bit multiplier                                    : 6
+# Adders/Subtractors                                   : 51
+ 3-bit adder                                           : 4
+ 6-bit adder                                           : 7
+ 7-bit adder                                           : 3
+ 8-bit adder                                           : 15
+ 9-bit adder                                           : 22
+# Registers                                            : 22
+ 1-bit register                                        : 6
+ 3-bit register                                        : 4
+ 4-bit register                                        : 1
+ 6-bit register                                        : 4
+ 64-bit register                                       : 6
+ 9-bit register                                        : 1
+# Comparators                                          : 3
+ 64-bit comparator not equal                           : 3
+# Multiplexers                                         : 34
+ 1-bit 15-to-1 multiplexer                             : 3
+ 1-bit 2-to-1 multiplexer                              : 13
+ 3-bit 2-to-1 multiplexer                              : 6
+ 64-bit 2-to-1 multiplexer                             : 12
+# Logic shifters                                       : 42
+ 127-bit shifter logical right                         : 3
+ 179-bit shifter logical right                         : 9
+ 299-bit shifter logical right                         : 18
+ 511-bit shifter logical right                         : 12
+# Tristates                                            : 9
+ 1-bit tristate buffer                                 : 9
+# FSMs                                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <spi_master_6>.
+The following registers are absorbed into counter <M_sck_reg_q>: 1 register on signal <M_sck_reg_q>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <spi_master_6> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_master_7>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+The following registers are absorbed into counter <M_sck_reg_q>: 1 register on signal <M_sck_reg_q>.
+Unit <spi_master_7> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_master_8>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+The following registers are absorbed into counter <M_sck_reg_q>: 1 register on signal <M_sck_reg_q>.
+Unit <spi_master_8> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 9
+ 2x4-bit multiplier                                    : 1
+ 3x4-bit multiplier                                    : 1
+ 4x2-bit multiplier                                    : 1
+ 4x3-bit multiplier                                    : 2
+ 4x4-bit multiplier                                    : 4
+# Adders/Subtractors                                   : 45
+ 3-bit adder                                           : 3
+ 6-bit adder                                           : 3
+ 7-bit adder                                           : 9
+ 8-bit adder                                           : 30
+# Counters                                             : 6
+ 3-bit up counter                                      : 1
+ 6-bit up counter                                      : 4
+ 9-bit up counter                                      : 1
+# Registers                                            : 403
+ Flip-Flops                                            : 403
+# Comparators                                          : 3
+ 64-bit comparator not equal                           : 3
+# Multiplexers                                         : 223
+ 1-bit 15-to-1 multiplexer                             : 3
+ 1-bit 2-to-1 multiplexer                              : 205
+ 3-bit 2-to-1 multiplexer                              : 6
+ 64-bit 2-to-1 multiplexer                             : 9
+# Logic shifters                                       : 42
+ 127-bit shifter logical right                         : 3
+ 179-bit shifter logical right                         : 9
+ 299-bit shifter logical right                         : 18
+ 511-bit shifter logical right                         : 12
+# FSMs                                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <display/FSM_0> on signal <M_scheduler_q[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <display/mod0/FSM_1> on signal <M_state_q[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+ 1100  | 1100
+ 1101  | 1101
+ 1110  | 1110
+ 1111  | 1111
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <display/mod1/FSM_2> on signal <M_state_q[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+ 1100  | 1100
+ 1101  | 1101
+ 1110  | 1110
+ 1111  | 1111
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <display/mod2/FSM_3> on signal <M_state_q[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+ 1100  | 1100
+ 1101  | 1101
+ 1110  | 1110
+ 1111  | 1111
+-------------------
+WARNING:Xst:1293 - FF/Latch <M_data_reg_q_63> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_62> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_61> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_60> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_55> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_47> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_45> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_44> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_35> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_31> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_29> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_28> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_21> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_20> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_15> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_13> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_12> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_7> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_data_reg_q_14> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_30> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_46> has a constant value of 0 in block <led_matrix_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_data_reg_q_63> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_62> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_61> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_60> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_55> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_47> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_45> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_44> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_35> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_31> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_29> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_28> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_21> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_20> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_15> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_13> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_12> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_7> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_data_reg_q_14> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_30> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_46> has a constant value of 0 in block <led_matrix_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_data_reg_q_63> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_62> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_61> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_60> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_55> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_47> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_45> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_44> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_35> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_31> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_29> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_28> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_21> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_20> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_15> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_13> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_12> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_7> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_data_reg_q_14> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_30> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_data_reg_q_46> has a constant value of 0 in block <led_matrix_5>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_8> in Unit <led_matrix_3> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_24> <M_data_reg_q_40> <M_data_reg_q_56> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_9> in Unit <led_matrix_3> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_25> <M_data_reg_q_41> <M_data_reg_q_57> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_0> in Unit <led_matrix_3> is equivalent to the following FF/Latch, which will be removed : <M_data_reg_q_16> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_10> in Unit <led_matrix_3> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_26> <M_data_reg_q_42> <M_data_reg_q_58> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_11> in Unit <led_matrix_3> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_27> <M_data_reg_q_43> <M_data_reg_q_59> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_1> in Unit <led_matrix_3> is equivalent to the following 2 FFs/Latches, which will be removed : <M_data_reg_q_18> <M_data_reg_q_49> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_10> in Unit <led_matrix_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_26> <M_data_reg_q_42> <M_data_reg_q_58> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_11> in Unit <led_matrix_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_27> <M_data_reg_q_43> <M_data_reg_q_59> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_1> in Unit <led_matrix_4> is equivalent to the following 2 FFs/Latches, which will be removed : <M_data_reg_q_18> <M_data_reg_q_49> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_0> in Unit <led_matrix_4> is equivalent to the following FF/Latch, which will be removed : <M_data_reg_q_16> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_8> in Unit <led_matrix_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_24> <M_data_reg_q_40> <M_data_reg_q_56> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_9> in Unit <led_matrix_4> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_25> <M_data_reg_q_41> <M_data_reg_q_57> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_11> in Unit <led_matrix_5> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_27> <M_data_reg_q_43> <M_data_reg_q_59> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_1> in Unit <led_matrix_5> is equivalent to the following 2 FFs/Latches, which will be removed : <M_data_reg_q_18> <M_data_reg_q_49> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_8> in Unit <led_matrix_5> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_24> <M_data_reg_q_40> <M_data_reg_q_56> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_0> in Unit <led_matrix_5> is equivalent to the following FF/Latch, which will be removed : <M_data_reg_q_16> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_9> in Unit <led_matrix_5> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_25> <M_data_reg_q_41> <M_data_reg_q_57> 
+INFO:Xst:2261 - The FF/Latch <M_data_reg_q_10> in Unit <led_matrix_5> is equivalent to the following 3 FFs/Latches, which will be removed : <M_data_reg_q_26> <M_data_reg_q_42> <M_data_reg_q_58> 
+
+Optimizing unit <mojo_top_0> ...
+
+Optimizing unit <display_1> ...
+
+Optimizing unit <led_matrix_3> ...
+
+Optimizing unit <spi_master_6> ...
+
+Optimizing unit <led_matrix_4> ...
+
+Optimizing unit <spi_master_7> ...
+
+Optimizing unit <led_matrix_5> ...
+
+Optimizing unit <spi_master_8> ...
+WARNING:Xst:1293 - FF/Latch <display/mod0/M_data_reg_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod1/M_data_reg_q_39> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod1/M_data_reg_q_37> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod1/M_data_reg_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod2/M_data_reg_q_39> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod2/M_data_reg_q_37> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod2/M_data_reg_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_4> 
+INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_50> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_17> <display/mod2/M_data_reg_q_2> 
+INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_53> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_5> <display/mod2/M_data_reg_q_3> 
+INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_48> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod2/M_data_reg_q_0> 
+INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_54> in Unit <mojo_top_0> is equivalent to the following 6 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_52> <display/mod2/M_data_reg_q_38> <display/mod2/M_data_reg_q_22> <display/mod2/M_data_reg_q_19> <display/mod2/M_data_reg_q_6> <display/mod2/M_data_reg_q_4> 
+INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_39> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod0/M_data_reg_q_37> 
+INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_50> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <display/mod0/M_data_reg_q_34> <display/mod0/M_data_reg_q_17> <display/mod0/M_data_reg_q_2> 
+INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_48> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod0/M_data_reg_q_0> 
+INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_54> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <display/mod0/M_data_reg_q_38> <display/mod0/M_data_reg_q_22> <display/mod0/M_data_reg_q_19> <display/mod0/M_data_reg_q_6> 
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_34> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod1/M_data_reg_q_17> <display/mod1/M_data_reg_q_2> 
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_51> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_23> 
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_52> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <display/mod1/M_data_reg_q_38> <display/mod1/M_data_reg_q_22> <display/mod1/M_data_reg_q_19> 
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_48> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 12.
+FlipFlop display/mod1/M_data_reg_q_10 has been replicated 1 time(s)
+FlipFlop display/mod1/M_data_reg_q_11 has been replicated 1 time(s)
+FlipFlop display/mod1/M_data_reg_q_8 has been replicated 1 time(s)
+FlipFlop display/mod1/M_data_reg_q_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <mojo_top_0> :
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <mojo_top_0> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 314
+ Flip-Flops                                            : 314
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top_0.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 698
+#      GND                         : 6
+#      INV                         : 10
+#      LUT1                        : 11
+#      LUT2                        : 19
+#      LUT3                        : 60
+#      LUT4                        : 105
+#      LUT5                        : 191
+#      LUT6                        : 197
+#      MUXCY                       : 80
+#      MUXF7                       : 5
+#      VCC                         : 5
+#      XORCY                       : 9
+# FlipFlops/Latches                : 314
+#      FD                          : 195
+#      FDE                         : 62
+#      FDR                         : 35
+#      FDRE                        : 18
+#      FDS                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 1
+#      OBUF                        : 17
+#      OBUFT                       : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             314  out of  11440     2%  
+ Number of Slice LUTs:                  593  out of   5720    10%  
+    Number used as Logic:               593  out of   5720    10%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    607
+   Number with an unused Flip Flop:     293  out of    607    48%  
+   Number with an unused LUT:            14  out of    607     2%  
+   Number of fully used LUT-FF pairs:   300  out of    607    49%  
+   Number of unique control sets:        23
+
+IO Utilization: 
+ Number of IOs:                          31
+ Number of bonded IOBs:                  25  out of    102    24%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 314   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 8.586ns (Maximum Frequency: 116.469MHz)
+   Minimum input arrival time before clock: 3.526ns
+   Maximum output required time after clock: 6.926ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.586ns (frequency: 116.469MHz)
+  Total number of paths / destination ports: 63650 / 446
+-------------------------------------------------------------------------
+Delay:               8.586ns (Levels of Logic = 7)
+  Source:            display/mod1/M_data_reg_q_33 (FF)
+  Destination:       display/mod1/spi/M_data_q_51 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: display/mod1/M_data_reg_q_33 to display/mod1/spi/M_data_q_51
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.525   1.080  M_data_reg_q_33 (M_data_reg_q_33)
+     LUT4:I0->O           14   0.254   1.127  n0014<63>121 (n0014<63>12)
+     LUT6:I5->O            1   0.254   0.958  M_data_reg_q[63]_GND_6_o_not_equal_25_o1 (M_data_reg_q[63]_GND_6_o_not_equal_25_o)
+     LUT6:I2->O            4   0.254   0.804  Mmux_M_spi_start_6 (Mmux_M_spi_start_6)
+     LUT5:I4->O           15   0.254   1.263  M_state_q<3>1_SW0 (N112)
+     begin scope: 'display/mod1/spi:N112'
+     LUT6:I4->O           18   0.250   1.235  _n0086_inv11 (_n0086_inv)
+     LUT5:I4->O            1   0.254   0.000  M_data_q_51_rstpot (M_data_q_51_rstpot)
+     FD:D                      0.074          M_data_q_51
+    ----------------------------------------
+    Total                      8.586ns (2.119ns logic, 6.467ns route)
+                                       (24.7% logic, 75.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.526ns (Levels of Logic = 3)
+  Source:            rst_n (PAD)
+  Destination:       reset_cond/M_stage_q_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst_n to reset_cond/M_stage_q_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O              4   0.255   0.803  M_reset_cond_in1_INV_0 (M_reset_cond_in)
+     begin scope: 'reset_cond:in'
+     FDS:S                     0.459          M_stage_q_0
+    ----------------------------------------
+    Total                      3.526ns (2.042ns logic, 1.484ns route)
+                                       (57.9% logic, 42.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 12 / 9
+-------------------------------------------------------------------------
+Offset:              6.926ns (Levels of Logic = 4)
+  Source:            display/mod2/spi/M_state_q (FF)
+  Destination:       cs2 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: display/mod2/spi/M_state_q to cs2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             80   0.525   2.053  M_state_q (M_state_q)
+     end scope: 'display/mod2/spi:busy'
+     INV:I->O             16   0.255   1.181  cs1_INV_0 (cs)
+     end scope: 'display/mod2:cs'
+     end scope: 'display:cs2'
+     OBUF:I->O                 2.912          cs2_OBUF (cs2)
+    ----------------------------------------
+    Total                      6.926ns (3.692ns logic, 3.234ns route)
+                                       (53.3% logic, 46.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.586|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.61 secs
+ 
+--> 
+
+Total memory usage is 478636 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   83 (   0 filtered)
+Number of infos    :   38 (   0 filtered)
+

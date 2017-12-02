@@ -1,0 +1,161 @@
+module led_matrix #(
+    // number of led matrix modules cascaded together per slave
+    MODULES = 4 : MODULES >= 1,
+    
+    CLK_DIV = 3 : CLK_DIV >= 1
+  )(
+    input clk,
+    input rst,
+    input data_in[8][MODULES * 8],
+    output sck,
+    output mosi,
+    output cs,
+    
+    input thaw,
+    output frozen
+  ) {
+  
+  .clk(clk) {
+    .rst(rst) {
+      fsm state = {DISABLE_TEST, DISABLE_DECODE, SET_INTENSITY, SET_SCANLIMIT, CLEAR_LINE0, CLEAR_LINE1, CLEAR_LINE2, CLEAR_LINE3,
+                   CLEAR_LINE4, CLEAR_LINE5, CLEAR_LINE6, CLEAR_LINE7, DISABLE_SHUTDOWN, READY, BUSY, FROZEN};
+      spi_master spi(#CLK_DIV(CLK_DIV), #CPOL(0), #CPHA(0), #TRANSMIT_SIZE(MODULES * 16));
+    }   
+    dff data_reg[MODULES * 16];
+    dff line[3];
+  }
+  
+  const LINE_MAP = {8h01,8h02,8h03,8h04,8h05,8h06,8h07,8h08};
+  sig line_data[MODULES * 16];
+  
+  always {
+    spi.miso = bz;
+    spi.start = 0;
+    spi.data_in = data_reg.q;
+    sck = spi.sck;
+    mosi = spi.mosi;
+    cs = !spi.busy;
+    frozen = 0;
+    
+    line_data[15:0] = c{LINE_MAP[line.q], data_in[line.q][7:0]};
+    line_data[31:16] = c{LINE_MAP[line.q], data_in[line.q][15:8]};
+    line_data[47:32] = c{LINE_MAP[line.q], data_in[line.q][23:16]};
+    line_data[63:48] = c{LINE_MAP[line.q], data_in[line.q][31:24]};
+    
+    case (state.q) {
+      state.DISABLE_TEST:
+        data_reg.d = MODULESx{16h0F00};
+        if (data_reg.q != MODULESx{16h0F00}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.DISABLE_DECODE;
+        }
+      state.DISABLE_DECODE:
+        data_reg.d = MODULESx{16h0900};
+        if (data_reg.q != MODULESx{16h0900}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.SET_INTENSITY;
+        }
+      state.SET_INTENSITY:
+        data_reg.d = MODULESx{16h0A00};
+        if (data_reg.q != MODULESx{16h0A00}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.SET_SCANLIMIT;
+        }
+      state.SET_SCANLIMIT:
+        data_reg.d = MODULESx{16h0B07};
+        if (data_reg.q != MODULESx{16h0B07}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.CLEAR_LINE1;
+        }
+      state.CLEAR_LINE0:
+        data_reg.d = MODULESx{16h0100};
+        if (data_reg.q != MODULESx{16h0100}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.CLEAR_LINE1;
+        }
+      state.CLEAR_LINE1:
+        data_reg.d = MODULESx{16h0200};
+        if (data_reg.q != MODULESx{16h0200}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.CLEAR_LINE2;
+        }
+      state.CLEAR_LINE2:
+        data_reg.d = MODULESx{16h0300};
+        if (data_reg.q != MODULESx{16h0300}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.CLEAR_LINE3;
+        }
+      state.CLEAR_LINE3:
+        data_reg.d = MODULESx{16h0400};
+        if (data_reg.q != MODULESx{16h0400}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.CLEAR_LINE4;
+        }
+      state.CLEAR_LINE4:
+        data_reg.d = MODULESx{16h0500};
+        if (data_reg.q != MODULESx{16h0500}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.CLEAR_LINE5;
+        }
+      state.CLEAR_LINE5:
+        data_reg.d = MODULESx{16h0600};
+        if (data_reg.q != MODULESx{16h0600}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.CLEAR_LINE6;
+        }
+      state.CLEAR_LINE6:
+        data_reg.d = MODULESx{16h0700};
+        if (data_reg.q != MODULESx{16h0700}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.CLEAR_LINE7;
+        }
+      state.CLEAR_LINE7:
+        data_reg.d = MODULESx{16h0800};
+        if (data_reg.q != MODULESx{16h0800}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.DISABLE_SHUTDOWN;
+        }
+      state.DISABLE_SHUTDOWN:
+        data_reg.d = MODULESx{16h0C01};
+        if (data_reg.q != MODULESx{16h0C01}) {
+          spi.start = 1;
+        } else if (!spi.busy) {
+          state.d = state.READY;
+          line.d = 0;
+        }
+      state.READY:
+        data_reg.d = line_data;
+        if (data_reg.q != line_data) {
+          spi.start = 1;
+        }
+        state.d = state.BUSY;
+      state.BUSY:
+        if (!spi.busy) {
+          state.d = state.READY;
+          if (line.q == 7) {
+            line.d = 0;
+            state.d = state.FROZEN;
+          } else {
+            line.d = line.q + 1;
+          }
+        }
+      state.FROZEN:
+        frozen = 1;
+        if (thaw) {
+          state.d = state.READY;
+        }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+module compare (
+    input alufn[6],                   //6-bit control signals
+    input z[1],                       //1-bit z input from adder
+    input v[1],                       //1-bit v input from adder
+    input n[1],                       //1-bit n input from adder
+    
+    output result[8]                  //8-bit output with LSB as result
+  ) {
+  
+  always {
+    case(alufn[2:1]) {
+			b01: result = z;                 //z
+			b10: result = n ^ v;             //n xor v
+			b11: result = (n ^ v) | z;       //(n xor v) or z
+			default: result = 0;             //default 0
+		}
+	}
+}

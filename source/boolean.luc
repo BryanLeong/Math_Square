@@ -1,0 +1,19 @@
+// 8-bit boolean unit
+module boolean (
+    input a[8],                       //8-bit input a
+    input b[8],                       //8-bit input b
+    input alufn[6],                   //6-bit control signals
+    
+    output result[8]                  //8-bit output
+  ) {
+
+  always {
+    case(alufn[3:0]) {
+      b1000: result = a & b;          //AND
+      b1110: result = a | b;          //OR
+      b0110: result = a ^ b;          //XOR
+      b1010: result = a;              //A
+      default: result = 0;
+    }
+  }
+}

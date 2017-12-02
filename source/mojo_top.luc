@@ -1,0 +1,71 @@
+module mojo_top (
+    input clk,              // 50MHz clock
+    input rst_n,            // reset button (active low)
+    output led [8],         // 8 user controllable LEDs
+    input cclk,             // configuration clock, AVR ready when high
+    output spi_miso,        // AVR SPI MISO
+    input spi_ss,           // AVR SPI Slave Select
+    input spi_mosi,         // AVR SPI MOSI
+    input spi_sck,          // AVR SPI Clock
+    output spi_channel [4], // AVR general purpose pins (used by default to select ADC channel)
+    input avr_tx,           // AVR TX (FPGA RX)
+    output avr_rx,          // AVR RX (FPGA TX)
+    input avr_rx_busy,       // AVR RX buffer full
+    
+    output mosi0,
+    output cs0,
+    output sck0,
+    output mosi1,
+    output cs1,
+    output sck1,
+    output mosi2,
+    output cs2,
+    output sck2
+  ) {
+  
+  sig rst;                  // reset signal
+  
+  .clk(clk) {
+    .rst(rst) {
+      display display;
+    }
+    reset_conditioner reset_cond;
+  }
+  
+  always {
+    mosi0 = display.mosi0;
+    cs0 = display.cs0;
+    sck0 = display.sck0;
+    mosi1 = display.mosi1;
+    cs1 = display.cs1;
+    sck1 = display.sck1;
+    mosi2 = display.mosi2;
+    cs2 = display.cs2;
+    sck2 = display.sck2;
+    
+    display.num[0][0] = 5;
+    display.num[0][1] = 4;
+    display.num[0][2] = 9;
+    display.num[1][0] = 3;
+    display.num[1][1] = 3;
+    display.num[1][2] = 1;
+    display.num[2][0] = 8;
+    display.num[2][1] = 1;
+    display.num[2][2] = 8;
+    
+    display.op[0] = 1;
+    display.op[1] = 1;
+    display.op[2] = 2;
+    display.op[3] = 2;
+    display.op[4] = 4;
+    display.op[5] = 4;
+    
+    reset_cond.in = ~rst_n; // input raw inverted reset signal
+    rst = reset_cond.out;   // conditioned reset
+    
+    spi_miso = bz;
+    spi_channel = bzzzz;
+    avr_rx = bz;
+    led = 8h00;             // turn LEDs off  
+  }
+}

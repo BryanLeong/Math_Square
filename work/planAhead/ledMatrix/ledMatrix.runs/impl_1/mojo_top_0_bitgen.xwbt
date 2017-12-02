@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=D:\Bryan\Documents\50.002\mojo-ide-B1.3.6\Projects\ledMatrix\work\planAhead\ledMatrix\ledMatrix.runs\impl_1\mojo_top_0_routed.ncd
+OUTFILE=D:\Bryan\Documents\50.002\mojo-ide-B1.3.6\Projects\ledMatrix\work\planAhead\ledMatrix\ledMatrix.runs\impl_1\mojo_top_0.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=D:\Bryan\Documents\50.002\mojo-ide-B1.3.6\Projects\ledMatrix\work\planAhead\ledMatrix\ledMatrix.runs\impl_1
+LICENSE=WebPack
+USER_INFO=211422840_0_0_132

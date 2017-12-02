@@ -1,0 +1,34 @@
+module adder (
+    input alufn[6],                   //6-bit control signals
+    input a[8],                       //8-bit input
+    input b[8],                       //8-bit input
+
+    output result[8],                 //8-bit result of operation
+    output z[1],                      //true when all bits are 0
+    output v[1],                      //true when overflow detected
+    output n[1]                       //true when output is negative
+  ) {
+  
+  sig aOPb[16];                       //signal to store 16-bit result
+  sig xb[8];                          //b xor alufn[0]
+  var i;
+
+  always {
+      if(alufn != b000010) {          //check for multiply command
+        for(i = 0; i < 8; i++) {
+          xb[i] = b[i] ^ alufn[0];    //convert b to xb
+        }
+        aOPb = a + xb + alufn[0];     //a add/sub b
+        //check for overflow (add/sub)
+        v = (a[7] & xb[7] & ~aOPb[7]) | (~a[7] & ~xb[7] & aOPb[7]);
+      
+      } else {
+          aOPb = a * b;               //multiplication
+          v = |aOPb[15:8] | (~a[7] & ~b[7] & aOPb[7]);            //check for overflow (mul)
+      }
+    
+    result = aOPb[7:0];               //take the 8 LSBs for output
+    z = ~|aOPb[7:0];                  //check if all bits are 0
+    n = aOPb[7];                      //check if output is negative
+  }
+}
