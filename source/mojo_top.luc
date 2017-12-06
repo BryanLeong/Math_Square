@@ -1,4 +1,4 @@
-module mojo_top (
+module mojo_top(
     input clk,              // 50MHz clock
     input rst_n,            // reset button (active low)
     output led [8],         // 8 user controllable LEDs
@@ -11,6 +11,13 @@ module mojo_top (
     input avr_tx,           // AVR TX (FPGA RX)
     output avr_rx,          // AVR RX (FPGA TX)
     input avr_rx_busy,       // AVR RX buffer full
+    input button1,
+    input button2,
+    input button3,
+    input button4,
+    input button5,
+    input button6,
+    input button7,
     
     output mosi0,
     output cs0,
@@ -24,15 +31,22 @@ module mojo_top (
   ) {
   
   sig rst;                  // reset signal
-  
+  var i, j, k;
+  sig buttons[7];
+    
   .clk(clk) {
     .rst(rst) {
       display display;
+      .buttons(buttons){
+        game game;
+      }
     }
     reset_conditioner reset_cond;
   }
-  
+
   always {
+    buttons = c{button1, button2, button3, button4, button5, button6, button7};
+    
     mosi0 = display.mosi0;
     cs0 = display.cs0;
     sck0 = display.sck0;
@@ -43,22 +57,28 @@ module mojo_top (
     cs2 = display.cs2;
     sck2 = display.sck2;
     
-    display.num[0][0] = 5;
-    display.num[0][1] = 4;
-    display.num[0][2] = 9;
-    display.num[1][0] = 3;
-    display.num[1][1] = 3;
-    display.num[1][2] = 1;
-    display.num[2][0] = 8;
-    display.num[2][1] = 1;
-    display.num[2][2] = 8;
+    // Updating the display
+    j = 0;
+    k = 0;
+    for (i = 0; i < 8; i++) {
+      if (i < 3)
+        j = 0;
+      else if (j < 6)
+        j = 1;
+      else
+        j = 2;
+     
+      display.num[j][k] = game.num[i];
+      
+      k = k + 1;
+      if (k > 3)
+        k = 0;
+    }
     
-    display.op[0] = 1;
-    display.op[1] = 1;
-    display.op[2] = 2;
-    display.op[3] = 2;
-    display.op[4] = 4;
-    display.op[5] = 4;
+    // Updating the operators
+    for (i = 0; i < 6; i++) {
+      display.op[i] = game.op[i];   
+    } 
     
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset

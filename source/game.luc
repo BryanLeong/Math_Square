@@ -1,0 +1,57 @@
+module game (
+  input rst,
+  input clk,
+  input buttons[7],
+  output op[6][3],
+  output num[9][4]
+) 
+{
+  
+var i;
+  
+sig lvl[3], opTemp[6][3];
+
+.levelSelected(lvl) {  
+  levels levels;
+}
+  
+.clk(clk) {
+    
+  .rst(rst) {
+   dff lvls[3](.d(1)); // setting the init state to 1
+  }
+  	
+  fsm state(.clk(clk), #INIT(PLUS)) = {PLUS, MINUS, MUL, DIV};
+    
+  .rst(rst) {
+     operator_button operator_button1(.button(buttons[0]));  // Button to change the state
+     operator_button operator_button2(.button(buttons[1]));  // Button to change the state
+     operator_button operator_button3(.button(buttons[2]));  // Button to change the state
+     operator_button operator_button4(.button(buttons[3]));  // Button to change the state
+     operator_button operator_button5(.button(buttons[4]));  // Button to change the state
+     operator_button operator_button6(.button(buttons[5]));  // Button to change the state
+  }
+}
+
+  
+always {
+  
+  opTemp[0] = operator_button1.op;
+  opTemp[1] = operator_button2.op;
+  opTemp[2] = operator_button3.op;
+  opTemp[3] = operator_button4.op;
+  opTemp[4] = operator_button5.op;
+  opTemp[5] = operator_button6.op;
+  
+  op = opTemp;
+  
+  lvl = lvls.q;
+    
+  if (opTemp == levels.op) {
+    lvls.d = lvls.q + 1;  
+  } 
+    
+  num = levels.num;  // Numbers to the level
+    
+  }
+}

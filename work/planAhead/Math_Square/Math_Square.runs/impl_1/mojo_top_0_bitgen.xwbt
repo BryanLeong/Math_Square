@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.runs/impl_1/mojo_top_0_routed.ncd
+OUTFILE=/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.runs/impl_1/mojo_top_0.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.runs/impl_1
+LICENSE=WebPack
+USER_INFO=211449684_0_0_479
