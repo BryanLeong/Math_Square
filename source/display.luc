@@ -66,9 +66,9 @@ module display (
     col[2] = c{1b0,DIGITS[num[0][0]][1],1b0,OPERATORS[op[1]][1],1b0,DIGITS[num[1][0]][1],1b0,OPERATORS[5][1],1b0,DIGITS[num[2][0]][1],2b0};
     col[3] = c{1b0,DIGITS[num[0][0]][2],1b0,OPERATORS[op[1]][2],1b0,DIGITS[num[1][0]][2],1b0,OPERATORS[5][2],1b0,DIGITS[num[2][0]][2],2b0};
     col[4] = 32b0;
-    col[5] = c{1b0,OPERATORS[op[1]][0],7b0,OPERATORS[op[4]][0],7b0,OPERATORS[op[5]][0],2b0};
-    col[6] = c{1b0,OPERATORS[op[1]][1],7b0,OPERATORS[op[4]][1],7b0,OPERATORS[op[5]][1],2b0};
-    col[7] = c{1b0,OPERATORS[op[1]][2],7b0,OPERATORS[op[4]][2],7b0,OPERATORS[op[5]][2],2b0};
+    col[5] = c{1b0,OPERATORS[op[0]][0],7b0,OPERATORS[op[4]][0],7b0,OPERATORS[op[5]][0],2b0};
+    col[6] = c{1b0,OPERATORS[op[0]][1],7b0,OPERATORS[op[4]][1],7b0,OPERATORS[op[5]][1],2b0};
+    col[7] = c{1b0,OPERATORS[op[0]][2],7b0,OPERATORS[op[4]][2],7b0,OPERATORS[op[5]][2],2b0};
     col[8] = 32b0;
     col[9] = c{1b0,DIGITS[num[0][1]][0],1b0,OPERATORS[op[2]][0],1b0,DIGITS[num[1][1]][0],1b0,OPERATORS[5][0],1b0,DIGITS[num[2][1]][0],2b0};
     col[10] = c{1b0,DIGITS[num[0][1]][1],1b0,OPERATORS[op[2]][1],1b0,DIGITS[num[1][1]][1],1b0,OPERATORS[5][1],1b0,DIGITS[num[2][1]][1],2b0};

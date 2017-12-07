@@ -1,0 +1,73 @@
+module marker (
+    input clk,
+    input rst,
+    input num[9][4],
+    input op[6],
+    output results[6]
+  ) {
+
+  .clk(clk) {
+    .rst(rst) {     
+      fsm state = {COMPUTE, COMPARE};
+    }
+    
+    dff eqn[3];
+    dff reg[8];
+    dff res[6];
+  }
+  
+  const MAP = {{4d6,4d7,4d8},
+               {4d3,4d4,4d5},
+               {4d2,4d5,4d8},
+               {4d1,4d4,4d7},
+               {4d0,4d3,4d6},
+               {4d2,4d1,4d0}};
+  
+  alu alu;
+  
+  always {
+    alu.alufn = 0;
+    results = res.q;
+    
+    case (state.q) {
+      state.COMPUTE:      
+        case (op[eqn.q]) {
+          1:
+            alu.alufn = 6b000000;
+            alu.a = num[MAP[eqn.q][0]];
+            alu.b = num[MAP[eqn.q][1]];
+          2:
+            alu.alufn = 6b000001;
+            alu.a = num[MAP[eqn.q][0]];
+            alu.b = num[MAP[eqn.q][1]];
+          3:
+            alu.alufn = 6b000010;
+            alu.a = num[MAP[eqn.q][0]];
+            alu.b = num[MAP[eqn.q][1]];
+          4:
+            alu.alufn = 6b000010;
+            alu.a = num[MAP[eqn.q][1]];
+            alu.b = num[MAP[eqn.q][2]];
+        }
+        reg.d = alu.result;
+        state.d = state.COMPARE;
+        
+      state.COMPARE:
+        alu.alufn = 6b110011;
+        if (op[0] == 4) {
+          alu.a = num[MAP[eqn.q][0]];
+          alu.b = reg.q;
+        } else {
+          alu.a = reg.q;
+          alu.b = num[MAP[eqn.q][2]];
+        }
+        if (eqn.q == 5) {
+          eqn.d = 0;
+        } else {
+          eqn.d = eqn.q + 1;
+        }
+        res.d[eqn.q] = alu.result[0];
+        state.d = state.COMPUTE;
+    }
+  }
+}
