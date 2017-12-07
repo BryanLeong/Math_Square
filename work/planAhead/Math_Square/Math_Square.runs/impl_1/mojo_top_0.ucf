@@ -29,24 +29,15 @@ NET "cs2" IOSTANDARD = LVTTL;
 NET "sck2" LOC = P123;
 NET "sck2" IOSTANDARD = LVTTL;
 
-NET "button1" LOC = P99;
+NET "button1" LOC = P112;
 NET "button1" IOSTANDARD = LVTTL;
 NET "button1" PULLUP;
-NET "button2" LOC = P100;
+NET "button2" LOC = P114;
 NET "button2" IOSTANDARD = LVTTL;
 NET "button2" PULLUP;
-NET "button3" LOC = P101;
+NET "button3" LOC = P115;
 NET "button3" IOSTANDARD = LVTTL;
 NET "button3" PULLUP;
-NET "button4" LOC = P102;
-NET "button4" IOSTANDARD = LVTTL;
-NET "button4" PULLUP;
-NET "button5" LOC = P104;
-NET "button5" IOSTANDARD = LVTTL;
-NET "button5" PULLUP;
-NET "button6" LOC = P105;
-NET "button6" IOSTANDARD = LVTTL;
-NET "button6" PULLUP;
 
 ####################################################################################
 # Constraints from file : 'mojo.ucf'

@@ -20,10 +20,6 @@ module mojo_top_0 (
     input button1,
     input button2,
     input button3,
-    input button4,
-    input button5,
-    input button6,
-    input button7,
     output reg mosi0,
     output reg cs0,
     output reg sck0,
@@ -43,7 +39,7 @@ module mojo_top_0 (
   integer j;
   integer k;
   
-  reg [6:0] buttons;
+  reg [2:0] buttons;
   
   wire [1-1:0] M_display_mosi0;
   wire [1-1:0] M_display_cs0;
@@ -89,7 +85,9 @@ module mojo_top_0 (
   );
   
   always @* begin
-    buttons = {button1, button2, button3, button4, button5, button6, button7};
+    buttons[0+0-:1] = button1;
+    buttons[1+0-:1] = button2;
+    buttons[2+0-:1] = button3;
     mosi0 = M_display_mosi0;
     cs0 = M_display_cs0;
     sck0 = M_display_sck0;
@@ -99,24 +97,15 @@ module mojo_top_0 (
     mosi2 = M_display_mosi2;
     cs2 = M_display_cs2;
     sck2 = M_display_sck2;
-    j = 1'h0;
-    k = 1'h0;
-    for (i = 1'h0; i < 4'h8; i = i + 1) begin
-      if (i < 2'h3) begin
-        j = 1'h0;
-      end else begin
-        if (j < 3'h6) begin
-          j = 1'h1;
-        end else begin
-          j = 2'h2;
-        end
-      end
-      M_display_num[(j)*12+(k)*4+3-:4] = M_game_num[(i)*4+3-:4];
-      k = k + 1'h1;
-      if (k > 2'h3) begin
-        k = 1'h0;
-      end
-    end
+    M_display_num[0+0+3-:4] = M_game_num[0+3-:4];
+    M_display_num[0+4+3-:4] = M_game_num[4+3-:4];
+    M_display_num[0+8+3-:4] = M_game_num[8+3-:4];
+    M_display_num[12+0+3-:4] = M_game_num[12+3-:4];
+    M_display_num[12+4+3-:4] = M_game_num[16+3-:4];
+    M_display_num[12+8+3-:4] = M_game_num[20+3-:4];
+    M_display_num[24+0+3-:4] = M_game_num[24+3-:4];
+    M_display_num[24+4+3-:4] = M_game_num[28+3-:4];
+    M_display_num[24+8+3-:4] = M_game_num[32+3-:4];
     for (i = 1'h0; i < 3'h6; i = i + 1) begin
       M_display_op[(i)*3+2-:3] = M_game_op[(i)*3+2-:3];
     end

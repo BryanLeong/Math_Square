@@ -3,8 +3,8 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.01 secs
  
 --> 
 Reading design: mojo_top_0.prj
@@ -55,20 +55,14 @@ Netlist Hierarchy                  : rebuilt
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/pipeline_29.v" into library work
-Parsing module <pipeline_29>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/spi_master_16.v" into library work
 Parsing module <spi_master_16>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/spi_master_15.v" into library work
 Parsing module <spi_master_15>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/spi_master_14.v" into library work
 Parsing module <spi_master_14>.
-Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/edge_detector_17.v" into library work
-Parsing module <edge_detector_17>.
-Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/button_conditioner_18.v" into library work
-Parsing module <button_conditioner_18>.
-Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/operator_button_8.v" into library work
-Parsing module <operator_button_8>.
+Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/pipeline_17.v" into library work
+Parsing module <pipeline_17>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/levels_7.v" into library work
 Parsing module <levels_7>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/led_matrix_6.v" into library work
@@ -77,6 +71,10 @@ Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Mat
 Parsing module <led_matrix_5>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/led_matrix_4.v" into library work
 Parsing module <led_matrix_4>.
+Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/edge_detector_8.v" into library work
+Parsing module <edge_detector_8>.
+Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/button_conditioner_11.v" into library work
+Parsing module <button_conditioner_11>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/reset_conditioner_3.v" into library work
 Parsing module <reset_conditioner_3>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/game_2.v" into library work
@@ -116,17 +114,13 @@ Elaborating module <game_2>.
 
 Elaborating module <levels_7>.
 
-Elaborating module <operator_button_8>.
+Elaborating module <edge_detector_8>.
 
-Elaborating module <edge_detector_17>.
+Elaborating module <button_conditioner_11>.
 
-Elaborating module <button_conditioner_18>.
-
-Elaborating module <pipeline_29>.
-WARNING:HDLCompiler:1127 - "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/game_2.v" Line 106: Assignment to M_state_q ignored, since the identifier is never used
+Elaborating module <pipeline_17>.
 
 Elaborating module <reset_conditioner_3>.
-WARNING:HDLCompiler:634 - "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 57: Net <M_display_num[35]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -140,13 +134,12 @@ WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <M_display_num<35:28>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 91
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 91
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 91
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 91
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 91
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 91
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 87
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 87
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 87
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 87
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 87
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 87
     Summary:
 	inferred   6 Tristate(s).
 Unit <mojo_top_0> synthesized.
@@ -359,9 +352,9 @@ INFO:Xst:3210 - "/home/parallels/Documents/Math_Square/work/planAhead/Math_Squar
     Found 8-bit adder for signal <M_line_q[2]_GND_6_o_add_2_OUT> created at line 84.
     Found 6-bit adder for signal <M_line_q[2]_GND_6_o_add_14_OUT> created at line 87.
     Found 3-bit adder for signal <M_line_q[2]_GND_6_o_add_62_OUT> created at line 235.
-    Found 9-bit adder for signal <n0111> created at line 87.
     Found 9-bit adder for signal <n0106> created at line 85.
     Found 9-bit adder for signal <n0108> created at line 86.
+    Found 9-bit adder for signal <n0111> created at line 87.
     Found 511-bit shifter logical right for signal <n0103> created at line 84
     Found 511-bit shifter logical right for signal <n0102> created at line 85
     Found 511-bit shifter logical right for signal <n0101> created at line 86
@@ -457,14 +450,26 @@ Unit <spi_master_16> synthesized.
 
 Synthesizing Unit <game_2>.
     Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/game_2.v".
-WARNING:Xst:647 - Input <buttons<6:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 18-bit register for signal <M_operatorState_q>.
+    Found 6-bit register for signal <M_selectState_q>.
     Found 3-bit register for signal <M_lvls_q>.
-    Found 3-bit adder for signal <M_lvls_q[2]_GND_14_o_add_1_OUT> created at line 92.
-    Found 18-bit comparator equal for signal <M_operator_button6_op[2]_M_levels_op[17]_equal_1_o> created at line 91
+    Found 6-bit subtractor for signal <M_selectState_q[5]_GND_14_o_sub_12_OUT> created at line 104.
+    Found 6-bit adder for signal <M_selectState_q[5]_GND_14_o_add_6_OUT> created at line 95.
+    Found 8-bit adder for signal <n0116> created at line 108.
+    Found 3-bit adder for signal <M_operatorState_q[17]_GND_14_o_add_17_OUT> created at line 108.
+    Found 3-bit adder for signal <M_lvls_q[2]_GND_14_o_add_67_OUT> created at line 117.
+    Found 6x2-bit multiplier for signal <n0201> created at line 108.
+    Found 35-bit shifter logical right for signal <n0117> created at line 108
+    Found 6-bit comparator greater for signal <GND_14_o_M_selectState_q[5]_LessThan_9_o> created at line 97
+    Found 3-bit comparator greater for signal <PWR_9_o_M_operatorState_q[17]_LessThan_44_o> created at line 110
+    Found 18-bit comparator equal for signal <M_operatorState_q[17]_M_levels_op[17]_equal_67_o> created at line 116
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   3 D-type flip-flop(s).
-	inferred   1 Comparator(s).
+	inferred   1 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  64 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
 Unit <game_2> synthesized.
 
 Synthesizing Unit <levels_7>.
@@ -473,40 +478,28 @@ Synthesizing Unit <levels_7>.
 	inferred   2 Multiplexer(s).
 Unit <levels_7> synthesized.
 
-Synthesizing Unit <operator_button_8>.
-    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/operator_button_8.v".
-    Found 3-bit register for signal <M_ctr_q>.
-    Found 3-bit adder for signal <M_ctr_q[2]_GND_16_o_add_2_OUT> created at line 42.
-    Found 3-bit comparator greater for signal <PWR_11_o_M_ctr_q[2]_LessThan_5_o> created at line 44
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   3 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-	inferred   2 Multiplexer(s).
-Unit <operator_button_8> synthesized.
-
-Synthesizing Unit <edge_detector_17>.
-    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/edge_detector_17.v".
+Synthesizing Unit <edge_detector_8>.
+    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/edge_detector_8.v".
     Found 1-bit register for signal <M_last_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <edge_detector_17> synthesized.
+Unit <edge_detector_8> synthesized.
 
-Synthesizing Unit <button_conditioner_18>.
-    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/button_conditioner_18.v".
+Synthesizing Unit <button_conditioner_11>.
+    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/button_conditioner_11.v".
     Found 20-bit register for signal <M_ctr_q>.
-    Found 20-bit adder for signal <M_ctr_q[19]_GND_18_o_add_2_OUT> created at line 39.
+    Found 20-bit adder for signal <M_ctr_q[19]_GND_17_o_add_2_OUT> created at line 39.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
-Unit <button_conditioner_18> synthesized.
+Unit <button_conditioner_11> synthesized.
 
-Synthesizing Unit <pipeline_29>.
-    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/pipeline_29.v".
+Synthesizing Unit <pipeline_17>.
+    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/pipeline_17.v".
     Found 2-bit register for signal <M_pipe_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <pipeline_29> synthesized.
+Unit <pipeline_17> synthesized.
 
 Synthesizing Unit <reset_conditioner_3>.
     Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/reset_conditioner_3.v".
@@ -519,58 +512,67 @@ Unit <reset_conditioner_3> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 14
+# Multipliers                                          : 15
  4x3-bit multiplier                                    : 5
  4x4-bit multiplier                                    : 9
-# Adders/Subtractors                                   : 79
- 20-bit adder                                          : 6
- 3-bit adder                                           : 11
+ 6x2-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 73
+ 20-bit adder                                          : 3
+ 3-bit adder                                           : 6
  6-bit adder                                           : 7
+ 6-bit addsub                                          : 1
  7-bit adder                                           : 5
- 8-bit adder                                           : 22
+ 8-bit adder                                           : 23
  9-bit adder                                           : 28
-# Registers                                            : 47
- 1-bit register                                        : 12
- 2-bit register                                        : 6
- 20-bit register                                       : 6
- 3-bit register                                        : 11
+# Registers                                            : 34
+ 1-bit register                                        : 9
+ 18-bit register                                       : 1
+ 2-bit register                                        : 3
+ 20-bit register                                       : 3
+ 3-bit register                                        : 5
  4-bit register                                        : 1
- 6-bit register                                        : 4
+ 6-bit register                                        : 5
  64-bit register                                       : 6
  9-bit register                                        : 1
-# Comparators                                          : 10
+# Comparators                                          : 6
  18-bit comparator equal                               : 1
- 3-bit comparator greater                              : 6
+ 3-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
  64-bit comparator not equal                           : 3
-# Multiplexers                                         : 48
+# Multiplexers                                         : 100
  1-bit 15-to-1 multiplexer                             : 3
- 1-bit 2-to-1 multiplexer                              : 13
- 18-bit 2-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 18
+ 1-bit 2-to-1 multiplexer                              : 34
+ 18-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 3
+ 3-bit 2-to-1 multiplexer                              : 38
  36-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 6
  64-bit 2-to-1 multiplexer                             : 12
-# Logic shifters                                       : 57
+# Logic shifters                                       : 58
  127-bit shifter logical right                         : 3
  179-bit shifter logical right                         : 15
  299-bit shifter logical right                         : 27
+ 35-bit shifter logical right                          : 1
  511-bit shifter logical right                         : 12
 # Tristates                                            : 9
  1-bit tristate buffer                                 : 9
 # FSMs                                                 : 4
 
 =========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
 
-Synthesizing (advanced) Unit <button_conditioner_18>.
+Synthesizing (advanced) Unit <button_conditioner_11>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <button_conditioner_18> synthesized (advanced).
+Unit <button_conditioner_11> synthesized (advanced).
 
 Synthesizing (advanced) Unit <game_2>.
 The following registers are absorbed into counter <M_lvls_q>: 1 register on signal <M_lvls_q>.
+	Multiplier <Mmult_n0201> in block <game_2> and adder/subtractor <Madd_n0116_Madd> in block <game_2> are combined into a MAC<Maddsub_n0201>.
 Unit <game_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <spi_master_14>.
@@ -592,36 +594,43 @@ Unit <spi_master_16> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# MACs                                                 : 1
+ 6x2-to-5-bit MAC                                      : 1
 # Multipliers                                          : 14
  4x3-bit multiplier                                    : 5
  4x4-bit multiplier                                    : 9
-# Adders/Subtractors                                   : 66
- 3-bit adder                                           : 9
+# Adders/Subtractors                                   : 62
+ 3-bit adder                                           : 4
  6-bit adder                                           : 3
+ 6-bit addsub                                          : 1
  7-bit adder                                           : 15
  8-bit adder                                           : 39
-# Counters                                             : 13
- 20-bit up counter                                     : 6
+# Counters                                             : 10
+ 20-bit up counter                                     : 3
  3-bit up counter                                      : 2
  6-bit up counter                                      : 4
  9-bit up counter                                      : 1
-# Registers                                            : 439
- Flip-Flops                                            : 439
-# Comparators                                          : 10
+# Registers                                            : 436
+ Flip-Flops                                            : 436
+# Comparators                                          : 6
  18-bit comparator equal                               : 1
- 3-bit comparator greater                              : 6
+ 3-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
  64-bit comparator not equal                           : 3
-# Multiplexers                                         : 237
+# Multiplexers                                         : 289
  1-bit 15-to-1 multiplexer                             : 3
- 1-bit 2-to-1 multiplexer                              : 205
- 18-bit 2-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 18
+ 1-bit 2-to-1 multiplexer                              : 226
+ 18-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 3
+ 3-bit 2-to-1 multiplexer                              : 38
  36-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 6
  64-bit 2-to-1 multiplexer                             : 9
-# Logic shifters                                       : 57
+# Logic shifters                                       : 58
  127-bit shifter logical right                         : 3
  179-bit shifter logical right                         : 15
  299-bit shifter logical right                         : 27
+ 35-bit shifter logical right                          : 1
  511-bit shifter logical right                         : 12
 # FSMs                                                 : 4
 
@@ -801,27 +810,29 @@ Optimizing unit <led_matrix_6> ...
 Optimizing unit <spi_master_16> ...
 
 Optimizing unit <game_2> ...
-
-Optimizing unit <operator_button_8> ...
+WARNING:Xst:1293 - FF/Latch <M_selectState_q_3> has a constant value of 0 in block <game_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_selectState_q_4> has a constant value of 0 in block <game_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_selectState_q_5> has a constant value of 0 in block <game_2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <display/mod0/M_data_reg_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod1/M_data_reg_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod2/M_data_reg_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_3> 
-INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_50> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_34> <display/mod2/M_data_reg_q_17> <display/mod2/M_data_reg_q_2> 
-INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod2/M_data_reg_q_3> 
-INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_53> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod2/M_data_reg_q_23> 
+WARNING:Xst:1293 - FF/Latch <game/M_selectState_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game/M_selectState_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game/M_selectState_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_4> 
+INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_50> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_17> <display/mod2/M_data_reg_q_2> 
 INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_48> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod2/M_data_reg_q_0> 
-INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_54> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_52> <display/mod2/M_data_reg_q_22> <display/mod2/M_data_reg_q_19> <display/mod2/M_data_reg_q_6> 
-INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_22> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod0/M_data_reg_q_19> 
+INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_54> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_52> <display/mod2/M_data_reg_q_19> <display/mod2/M_data_reg_q_6> <display/mod2/M_data_reg_q_4> 
+INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_22> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod0/M_data_reg_q_19> <display/mod0/M_data_reg_q_6> 
 INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_34> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod0/M_data_reg_q_17> <display/mod0/M_data_reg_q_2> 
 INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_48> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod0/M_data_reg_q_0> 
-INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_2> 
-INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_52> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod1/M_data_reg_q_19> <display/mod1/M_data_reg_q_6> 
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_34> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod1/M_data_reg_q_17> <display/mod1/M_data_reg_q_2> 
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_52> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod1/M_data_reg_q_22> <display/mod1/M_data_reg_q_19> 
 INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_48> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 40.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 47.
 FlipFlop game/M_lvls_q_0 has been replicated 5 time(s)
 FlipFlop game/M_lvls_q_1 has been replicated 5 time(s)
 FlipFlop game/M_lvls_q_2 has been replicated 5 time(s)
@@ -829,12 +840,9 @@ FlipFlop game/M_lvls_q_2 has been replicated 5 time(s)
 Final Macro Processing ...
 
 Processing Unit <mojo_top_0> :
-	Found 2-bit shift register for signal <game/operator_button6/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button5/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button4/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button3/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button2/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button1/button_cond/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <game/button_cond3/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <game/button_cond2/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <game/button_cond1/sync/M_pipe_q_1>.
 INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 Unit <mojo_top_0> processed.
 
@@ -842,10 +850,10 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 485
- Flip-Flops                                            : 485
-# Shift Registers                                      : 6
- 2-bit shift register                                  : 6
+# Registers                                            : 426
+ Flip-Flops                                            : 426
+# Shift Registers                                      : 3
+ 2-bit shift register                                  : 3
 
 =========================================================================
 
@@ -868,31 +876,31 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1894
-#      GND                         : 20
-#      INV                         : 23
-#      LUT1                        : 122
-#      LUT2                        : 50
-#      LUT3                        : 137
-#      LUT4                        : 144
-#      LUT5                        : 345
-#      LUT6                        : 606
-#      MUXCY                       : 229
-#      MUXF7                       : 28
-#      VCC                         : 19
-#      XORCY                       : 171
-# FlipFlops/Latches                : 491
-#      FD                          : 153
-#      FDE                         : 125
-#      FDR                         : 35
-#      FDRE                        : 174
+# BELS                             : 2034
+#      GND                         : 14
+#      INV                         : 17
+#      LUT1                        : 66
+#      LUT2                        : 41
+#      LUT3                        : 116
+#      LUT4                        : 185
+#      LUT5                        : 434
+#      LUT6                        : 806
+#      MUXCY                       : 184
+#      MUXF7                       : 31
+#      VCC                         : 13
+#      XORCY                       : 127
+# FlipFlops/Latches                : 429
+#      FD                          : 195
+#      FDE                         : 78
+#      FDR                         : 53
+#      FDRE                        : 99
 #      FDS                         : 4
-# Shift Registers                  : 6
-#      SRLC16E                     : 6
+# Shift Registers                  : 3
+#      SRLC16E                     : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 30
-#      IBUF                        : 7
+# IO Buffers                       : 27
+#      IBUF                        : 4
 #      OBUF                        : 17
 #      OBUFT                       : 6
 
@@ -903,22 +911,22 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             491  out of  11440     4%  
- Number of Slice LUTs:                 1433  out of   5720    25%  
-    Number used as Logic:              1427  out of   5720    24%  
-    Number used as Memory:                6  out of   1440     0%  
-       Number used as SRL:                6
+ Number of Slice Registers:             429  out of  11440     3%  
+ Number of Slice LUTs:                 1668  out of   5720    29%  
+    Number used as Logic:              1665  out of   5720    29%  
+    Number used as Memory:                3  out of   1440     0%  
+       Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1490
-   Number with an unused Flip Flop:     999  out of   1490    67%  
-   Number with an unused LUT:            57  out of   1490     3%  
-   Number of fully used LUT-FF pairs:   434  out of   1490    29%  
-   Number of unique control sets:        53
+ Number of LUT Flip Flop pairs used:   1718
+   Number with an unused Flip Flop:    1289  out of   1718    75%  
+   Number with an unused LUT:            50  out of   1718     2%  
+   Number of fully used LUT-FF pairs:   379  out of   1718    22%  
+   Number of unique control sets:        38
 
 IO Utilization: 
- Number of IOs:                          38
- Number of bonded IOBs:                  31  out of    102    30%  
+ Number of IOs:                          34
+ Number of bonded IOBs:                  28  out of    102    27%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -944,7 +952,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 497   |
+clk                                | BUFGP                  | 432   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -955,7 +963,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 12.527ns (Maximum Frequency: 79.826MHz)
+   Minimum period: 13.271ns (Maximum Frequency: 75.350MHz)
    Minimum input arrival time before clock: 3.526ns
    Maximum output required time after clock: 6.949ns
    Maximum combinational path delay: No path found
@@ -966,47 +974,67 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 12.527ns (frequency: 79.826MHz)
-  Total number of paths / destination ports: 1840454 / 992
+  Clock period: 13.271ns (frequency: 75.350MHz)
+  Total number of paths / destination ports: 2390947 / 754
 -------------------------------------------------------------------------
-Delay:               12.527ns (Levels of Logic = 17)
-  Source:            game/M_lvls_q_0_3 (FF)
-  Destination:       display/mod0/spi/M_data_q_63 (FF)
+Delay:               13.271ns (Levels of Logic = 36)
+  Source:            game/M_lvls_q_1_1 (FF)
+  Destination:       display/mod2/spi/M_data_q_63 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: game/M_lvls_q_0_3 to display/mod0/spi/M_data_q_63
+  Data Path: game/M_lvls_q_1_1 to display/mod2/spi/M_data_q_63
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            11   0.525   1.267  M_lvls_q_0_3 (M_lvls_q_0_3)
-     end scope: 'game:M_lvls_q_0_3'
-     begin scope: 'display:M_lvls_q_0_3'
-     LUT3:I0->O            1   0.235   0.000  Mmult_n0319_Madd2_lut<2> (Mmult_n0319_Madd2_lut<2>)
-     MUXCY:S->O            1   0.215   0.000  Mmult_n0319_Madd2_cy<2> (Mmult_n0319_Madd2_cy<2>)
-     XORCY:CI->O         116   0.206   2.258  Mmult_n0319_Madd2_xor<3> (Madd_num[3]_GND_2_o_add_1_OUT_lut<3>)
-     begin scope: 'display/mod0:Madd_num[3]_GND_2_o_add_1_OUT_lut<3>'
-     LUT6:I5->O            1   0.254   0.910  Sh79178 (Sh79178)
-     LUT6:I3->O            1   0.235   0.682  Sh79179 (Sh79179)
-     LUT6:I5->O            2   0.254   0.954  Sh791710 (Sh791710)
-     LUT5:I2->O            1   0.235   0.910  Sh791737 (Sh7917)
-     LUT6:I3->O            1   0.235   0.000  Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_lut<17> (Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_lut<17>)
-     MUXCY:S->O            1   0.215   0.000  Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_cy<17> (Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_cy<17>)
-     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_cy<18> (Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_cy<18>)
-     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_cy<19> (Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_cy<19>)
-     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_cy<20> (Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_cy<20>)
-     MUXCY:CI->O           5   0.235   0.841  Mcompar_M_data_reg_q[63]_GND_3_o_not_equal_60_o_cy<21> (M_data_reg_q[63]_GND_3_o_not_equal_60_o)
-     begin scope: 'display/mod0/spi:M_data_reg_q[63]_GND_3_o_not_equal_60_o'
-     LUT6:I5->O           17   0.254   1.209  _n0092_inv11 (_n0092_inv)
+     FDRE:C->Q             6   0.525   1.104  M_lvls_q_1_1 (M_lvls_q_1_1)
+     begin scope: 'game/levels:levelSelected<1>'
+     LUT3:I0->O            0   0.235   0.000  num<32>1_1 (num<32>12)
+     end scope: 'game/levels:num<32>12'
+     end scope: 'game:num<32>12'
+     begin scope: 'display:num<22>'
+     MUXCY:DI->O           1   0.181   0.000  Mmult_n0425_Madd2_cy<2> (Mmult_n0425_Madd2_cy<2>)
+     XORCY:CI->O         114   0.206   2.252  Mmult_n0425_Madd2_xor<3> (Madd_num[35]_GND_2_o_add_131_OUT_lut<3>)
+     begin scope: 'display/mod2:Madd_num[35]_GND_2_o_add_131_OUT_lut<3>'
+     LUT6:I5->O            1   0.254   0.790  Sh178311_SW0_SW1 (N371)
+     LUT5:I3->O            1   0.250   0.910  Sh178311_SW0 (N109)
+     LUT6:I3->O            2   0.235   0.726  Sh178311 (Sh178311)
+     LUT6:I5->O            1   0.254   0.681  Sh178312 (Sh178312)
+     MUXF7:S->O            1   0.185   0.682  Sh178332_SW2 (N55)
+     LUT6:I5->O            1   0.254   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_lut<0>1 (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<0> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<1> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<2> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<3> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<4> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<5> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<6> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<7> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<8> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<9> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<10> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<11> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<12> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<13> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<14> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<15> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<16> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<17> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<18> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<19> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<20> (Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<20>)
+     MUXCY:CI->O           5   0.235   0.841  Mcompar_M_data_reg_q[63]_GND_9_o_not_equal_60_o_cy<21> (M_data_reg_q[63]_GND_9_o_not_equal_60_o)
+     begin scope: 'display/mod2/spi:M_data_reg_q[63]_GND_9_o_not_equal_60_o'
+     LUT6:I5->O           17   0.254   1.209  _n0086_inv11 (_n0086_inv)
      LUT4:I3->O            1   0.254   0.000  M_data_q_63_rstpot (M_data_q_63_rstpot)
      FD:D                      0.074          M_data_q_63
     ----------------------------------------
-    Total                     12.527ns (3.496ns logic, 9.031ns route)
-                                       (27.9% logic, 72.1% route)
+    Total                     13.271ns (4.076ns logic, 9.195ns route)
+                                       (30.7% logic, 69.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 10 / 10
+  Total number of paths / destination ports: 7 / 7
 -------------------------------------------------------------------------
 Offset:              3.526ns (Levels of Logic = 3)
   Source:            rst_n (PAD)
@@ -1058,21 +1086,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   12.527|         |         |         |
+clk            |   13.271|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 38.00 secs
-Total CPU time to Xst completion: 36.62 secs
+Total REAL time to Xst completion: 44.00 secs
+Total CPU time to Xst completion: 41.71 secs
  
 --> 
 
 
-Total memory usage is 639528 kilobytes
+Total memory usage is 643064 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   83 (   0 filtered)
-Number of infos    :   37 (   0 filtered)
+Number of warnings :   85 (   0 filtered)
+Number of infos    :   36 (   0 filtered)
 

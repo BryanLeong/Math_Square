@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Dec 06 14:07:31 2017
+// Written by: Map P.20131013 on Thu Dec 07 21:14:53 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -15,13 +15,10 @@ COMP "sck2" LOCATE = SITE "P123" LEVEL 1;
 COMP "mosi0" LOCATE = SITE "P34" LEVEL 1;
 COMP "mosi1" LOCATE = SITE "P9" LEVEL 1;
 COMP "mosi2" LOCATE = SITE "P131" LEVEL 1;
-COMP "button1" LOCATE = SITE "P99" LEVEL 1;
-COMP "button2" LOCATE = SITE "P100" LEVEL 1;
-COMP "button3" LOCATE = SITE "P101" LEVEL 1;
+COMP "button1" LOCATE = SITE "P112" LEVEL 1;
+COMP "button2" LOCATE = SITE "P114" LEVEL 1;
+COMP "button3" LOCATE = SITE "P115" LEVEL 1;
 COMP "rst_n" LOCATE = SITE "P38" LEVEL 1;
-COMP "button4" LOCATE = SITE "P102" LEVEL 1;
-COMP "button5" LOCATE = SITE "P104" LEVEL 1;
-COMP "button6" LOCATE = SITE "P105" LEVEL 1;
 COMP "spi_sck" LOCATE = SITE "P43" LEVEL 1;
 COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
 COMP "led[0]" LOCATE = SITE "P134" LEVEL 1;
@@ -32,172 +29,7 @@ COMP "led[6]" LOCATE = SITE "P124" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
 COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
-TIMEGRP clk = BEL "game/M_lvls_q_2" BEL "game/M_lvls_q_1" BEL
-        "game/M_lvls_q_0" BEL "game/M_lvls_q_2_1" BEL "game/M_lvls_q_0_1" BEL
-        "game/M_lvls_q_1_1" BEL "game/M_lvls_q_2_2" BEL "game/M_lvls_q_0_2"
-        BEL "game/M_lvls_q_1_2" BEL "game/M_lvls_q_0_3" BEL
-        "game/M_lvls_q_2_3" BEL "game/M_lvls_q_1_3" BEL "game/M_lvls_q_2_4"
-        BEL "game/M_lvls_q_0_4" BEL "game/M_lvls_q_1_4" BEL
-        "game/M_lvls_q_2_5" BEL "game/M_lvls_q_0_5" BEL "game/M_lvls_q_1_5"
-        BEL "game/operator_button1/M_ctr_q_2" BEL
-        "game/operator_button1/M_ctr_q_1" BEL
-        "game/operator_button1/M_ctr_q_0" BEL
-        "game/operator_button1/edge_detector/M_last_q" BEL
-        "game/operator_button1/button_cond/M_ctr_q_19" BEL
-        "game/operator_button1/button_cond/M_ctr_q_18" BEL
-        "game/operator_button1/button_cond/M_ctr_q_17" BEL
-        "game/operator_button1/button_cond/M_ctr_q_16" BEL
-        "game/operator_button1/button_cond/M_ctr_q_15" BEL
-        "game/operator_button1/button_cond/M_ctr_q_14" BEL
-        "game/operator_button1/button_cond/M_ctr_q_13" BEL
-        "game/operator_button1/button_cond/M_ctr_q_12" BEL
-        "game/operator_button1/button_cond/M_ctr_q_11" BEL
-        "game/operator_button1/button_cond/M_ctr_q_10" BEL
-        "game/operator_button1/button_cond/M_ctr_q_9" BEL
-        "game/operator_button1/button_cond/M_ctr_q_8" BEL
-        "game/operator_button1/button_cond/M_ctr_q_7" BEL
-        "game/operator_button1/button_cond/M_ctr_q_6" BEL
-        "game/operator_button1/button_cond/M_ctr_q_5" BEL
-        "game/operator_button1/button_cond/M_ctr_q_4" BEL
-        "game/operator_button1/button_cond/M_ctr_q_3" BEL
-        "game/operator_button1/button_cond/M_ctr_q_2" BEL
-        "game/operator_button1/button_cond/M_ctr_q_1" BEL
-        "game/operator_button1/button_cond/M_ctr_q_0" BEL
-        "game/operator_button1/button_cond/sync/M_pipe_q_1" BEL
-        "game/operator_button1/button_cond/sync/Mshreg_M_pipe_q_1" BEL
-        "game/operator_button2/M_ctr_q_2" BEL
-        "game/operator_button2/M_ctr_q_1" BEL
-        "game/operator_button2/M_ctr_q_0" BEL
-        "game/operator_button2/edge_detector/M_last_q" BEL
-        "game/operator_button2/button_cond/M_ctr_q_19" BEL
-        "game/operator_button2/button_cond/M_ctr_q_18" BEL
-        "game/operator_button2/button_cond/M_ctr_q_17" BEL
-        "game/operator_button2/button_cond/M_ctr_q_16" BEL
-        "game/operator_button2/button_cond/M_ctr_q_15" BEL
-        "game/operator_button2/button_cond/M_ctr_q_14" BEL
-        "game/operator_button2/button_cond/M_ctr_q_13" BEL
-        "game/operator_button2/button_cond/M_ctr_q_12" BEL
-        "game/operator_button2/button_cond/M_ctr_q_11" BEL
-        "game/operator_button2/button_cond/M_ctr_q_10" BEL
-        "game/operator_button2/button_cond/M_ctr_q_9" BEL
-        "game/operator_button2/button_cond/M_ctr_q_8" BEL
-        "game/operator_button2/button_cond/M_ctr_q_7" BEL
-        "game/operator_button2/button_cond/M_ctr_q_6" BEL
-        "game/operator_button2/button_cond/M_ctr_q_5" BEL
-        "game/operator_button2/button_cond/M_ctr_q_4" BEL
-        "game/operator_button2/button_cond/M_ctr_q_3" BEL
-        "game/operator_button2/button_cond/M_ctr_q_2" BEL
-        "game/operator_button2/button_cond/M_ctr_q_1" BEL
-        "game/operator_button2/button_cond/M_ctr_q_0" BEL
-        "game/operator_button2/button_cond/sync/M_pipe_q_1" BEL
-        "game/operator_button2/button_cond/sync/Mshreg_M_pipe_q_1" BEL
-        "game/operator_button3/M_ctr_q_2" BEL
-        "game/operator_button3/M_ctr_q_1" BEL
-        "game/operator_button3/M_ctr_q_0" BEL
-        "game/operator_button3/edge_detector/M_last_q" BEL
-        "game/operator_button3/button_cond/M_ctr_q_19" BEL
-        "game/operator_button3/button_cond/M_ctr_q_18" BEL
-        "game/operator_button3/button_cond/M_ctr_q_17" BEL
-        "game/operator_button3/button_cond/M_ctr_q_16" BEL
-        "game/operator_button3/button_cond/M_ctr_q_15" BEL
-        "game/operator_button3/button_cond/M_ctr_q_14" BEL
-        "game/operator_button3/button_cond/M_ctr_q_13" BEL
-        "game/operator_button3/button_cond/M_ctr_q_12" BEL
-        "game/operator_button3/button_cond/M_ctr_q_11" BEL
-        "game/operator_button3/button_cond/M_ctr_q_10" BEL
-        "game/operator_button3/button_cond/M_ctr_q_9" BEL
-        "game/operator_button3/button_cond/M_ctr_q_8" BEL
-        "game/operator_button3/button_cond/M_ctr_q_7" BEL
-        "game/operator_button3/button_cond/M_ctr_q_6" BEL
-        "game/operator_button3/button_cond/M_ctr_q_5" BEL
-        "game/operator_button3/button_cond/M_ctr_q_4" BEL
-        "game/operator_button3/button_cond/M_ctr_q_3" BEL
-        "game/operator_button3/button_cond/M_ctr_q_2" BEL
-        "game/operator_button3/button_cond/M_ctr_q_1" BEL
-        "game/operator_button3/button_cond/M_ctr_q_0" BEL
-        "game/operator_button3/button_cond/sync/M_pipe_q_1" BEL
-        "game/operator_button3/button_cond/sync/Mshreg_M_pipe_q_1" BEL
-        "game/operator_button4/M_ctr_q_2" BEL
-        "game/operator_button4/M_ctr_q_1" BEL
-        "game/operator_button4/M_ctr_q_0" BEL
-        "game/operator_button4/edge_detector/M_last_q" BEL
-        "game/operator_button4/button_cond/M_ctr_q_19" BEL
-        "game/operator_button4/button_cond/M_ctr_q_18" BEL
-        "game/operator_button4/button_cond/M_ctr_q_17" BEL
-        "game/operator_button4/button_cond/M_ctr_q_16" BEL
-        "game/operator_button4/button_cond/M_ctr_q_15" BEL
-        "game/operator_button4/button_cond/M_ctr_q_14" BEL
-        "game/operator_button4/button_cond/M_ctr_q_13" BEL
-        "game/operator_button4/button_cond/M_ctr_q_12" BEL
-        "game/operator_button4/button_cond/M_ctr_q_11" BEL
-        "game/operator_button4/button_cond/M_ctr_q_10" BEL
-        "game/operator_button4/button_cond/M_ctr_q_9" BEL
-        "game/operator_button4/button_cond/M_ctr_q_8" BEL
-        "game/operator_button4/button_cond/M_ctr_q_7" BEL
-        "game/operator_button4/button_cond/M_ctr_q_6" BEL
-        "game/operator_button4/button_cond/M_ctr_q_5" BEL
-        "game/operator_button4/button_cond/M_ctr_q_4" BEL
-        "game/operator_button4/button_cond/M_ctr_q_3" BEL
-        "game/operator_button4/button_cond/M_ctr_q_2" BEL
-        "game/operator_button4/button_cond/M_ctr_q_1" BEL
-        "game/operator_button4/button_cond/M_ctr_q_0" BEL
-        "game/operator_button4/button_cond/sync/M_pipe_q_1" BEL
-        "game/operator_button4/button_cond/sync/Mshreg_M_pipe_q_1" BEL
-        "game/operator_button5/M_ctr_q_2" BEL
-        "game/operator_button5/M_ctr_q_1" BEL
-        "game/operator_button5/M_ctr_q_0" BEL
-        "game/operator_button5/edge_detector/M_last_q" BEL
-        "game/operator_button5/button_cond/M_ctr_q_19" BEL
-        "game/operator_button5/button_cond/M_ctr_q_18" BEL
-        "game/operator_button5/button_cond/M_ctr_q_17" BEL
-        "game/operator_button5/button_cond/M_ctr_q_16" BEL
-        "game/operator_button5/button_cond/M_ctr_q_15" BEL
-        "game/operator_button5/button_cond/M_ctr_q_14" BEL
-        "game/operator_button5/button_cond/M_ctr_q_13" BEL
-        "game/operator_button5/button_cond/M_ctr_q_12" BEL
-        "game/operator_button5/button_cond/M_ctr_q_11" BEL
-        "game/operator_button5/button_cond/M_ctr_q_10" BEL
-        "game/operator_button5/button_cond/M_ctr_q_9" BEL
-        "game/operator_button5/button_cond/M_ctr_q_8" BEL
-        "game/operator_button5/button_cond/M_ctr_q_7" BEL
-        "game/operator_button5/button_cond/M_ctr_q_6" BEL
-        "game/operator_button5/button_cond/M_ctr_q_5" BEL
-        "game/operator_button5/button_cond/M_ctr_q_4" BEL
-        "game/operator_button5/button_cond/M_ctr_q_3" BEL
-        "game/operator_button5/button_cond/M_ctr_q_2" BEL
-        "game/operator_button5/button_cond/M_ctr_q_1" BEL
-        "game/operator_button5/button_cond/M_ctr_q_0" BEL
-        "game/operator_button5/button_cond/sync/M_pipe_q_1" BEL
-        "game/operator_button5/button_cond/sync/Mshreg_M_pipe_q_1" BEL
-        "game/operator_button6/M_ctr_q_2" BEL
-        "game/operator_button6/M_ctr_q_1" BEL
-        "game/operator_button6/M_ctr_q_0" BEL
-        "game/operator_button6/edge_detector/M_last_q" BEL
-        "game/operator_button6/button_cond/M_ctr_q_19" BEL
-        "game/operator_button6/button_cond/M_ctr_q_18" BEL
-        "game/operator_button6/button_cond/M_ctr_q_17" BEL
-        "game/operator_button6/button_cond/M_ctr_q_16" BEL
-        "game/operator_button6/button_cond/M_ctr_q_15" BEL
-        "game/operator_button6/button_cond/M_ctr_q_14" BEL
-        "game/operator_button6/button_cond/M_ctr_q_13" BEL
-        "game/operator_button6/button_cond/M_ctr_q_12" BEL
-        "game/operator_button6/button_cond/M_ctr_q_11" BEL
-        "game/operator_button6/button_cond/M_ctr_q_10" BEL
-        "game/operator_button6/button_cond/M_ctr_q_9" BEL
-        "game/operator_button6/button_cond/M_ctr_q_8" BEL
-        "game/operator_button6/button_cond/M_ctr_q_7" BEL
-        "game/operator_button6/button_cond/M_ctr_q_6" BEL
-        "game/operator_button6/button_cond/M_ctr_q_5" BEL
-        "game/operator_button6/button_cond/M_ctr_q_4" BEL
-        "game/operator_button6/button_cond/M_ctr_q_3" BEL
-        "game/operator_button6/button_cond/M_ctr_q_2" BEL
-        "game/operator_button6/button_cond/M_ctr_q_1" BEL
-        "game/operator_button6/button_cond/M_ctr_q_0" BEL
-        "game/operator_button6/button_cond/sync/M_pipe_q_1" BEL
-        "game/operator_button6/button_cond/sync/Mshreg_M_pipe_q_1" BEL
-        "clk_BUFGP/BUFG" BEL "reset_cond/M_stage_q_3" BEL
-        "reset_cond/M_stage_q_2" BEL "reset_cond/M_stage_q_1" BEL
-        "reset_cond/M_stage_q_0" BEL "display/M_scheduler_q_FSM_FFd1" BEL
+TIMEGRP clk = BEL "display/M_scheduler_q_FSM_FFd1" BEL
         "display/M_scheduler_q_FSM_FFd2" BEL "display/mod0/M_line_q_0" BEL
         "display/mod0/M_line_q_1" BEL "display/mod0/M_line_q_2" BEL
         "display/mod0/spi/M_ctr_q_5" BEL "display/mod0/spi/M_ctr_q_4" BEL
@@ -251,9 +83,9 @@ TIMEGRP clk = BEL "game/M_lvls_q_2" BEL "game/M_lvls_q_1" BEL
         BEL "display/mod0/M_data_reg_q_48" BEL "display/mod0/M_data_reg_q_53"
         BEL "display/mod0/M_data_reg_q_54" BEL "display/mod0/M_data_reg_q_1"
         BEL "display/mod0/M_data_reg_q_3" BEL "display/mod0/M_data_reg_q_4"
-        BEL "display/mod0/M_data_reg_q_5" BEL "display/mod0/M_data_reg_q_6"
-        BEL "display/mod0/M_data_reg_q_8" BEL "display/mod0/M_data_reg_q_9"
-        BEL "display/mod1/M_state_q_FSM_FFd1" BEL
+        BEL "display/mod0/M_data_reg_q_5" BEL "display/mod0/M_data_reg_q_8"
+        BEL "display/mod0/M_data_reg_q_9" BEL
+        "display/mod1/M_state_q_FSM_FFd1" BEL
         "display/mod1/M_state_q_FSM_FFd2" BEL
         "display/mod1/M_state_q_FSM_FFd3" BEL
         "display/mod1/M_state_q_FSM_FFd4" BEL "display/mod1/M_line_q_0" BEL
@@ -265,6 +97,16 @@ TIMEGRP clk = BEL "game/M_lvls_q_2" BEL "game/M_lvls_q_1" BEL
         BEL "display/mod1/spi/M_ctr_q_4" BEL "display/mod1/spi/M_ctr_q_3" BEL
         "display/mod1/spi/M_ctr_q_2" BEL "display/mod1/spi/M_ctr_q_1" BEL
         "display/mod1/spi/M_ctr_q_0" BEL "display/mod1/spi/M_mosi_reg_q" BEL
+        "display/mod1/spi/M_state_q" BEL "display/mod1/spi/M_data_q_63" BEL
+        "display/mod1/spi/M_data_q_62" BEL "display/mod1/spi/M_data_q_61" BEL
+        "display/mod1/spi/M_data_q_60" BEL "display/mod1/spi/M_data_q_59" BEL
+        "display/mod1/spi/M_data_q_58" BEL "display/mod1/spi/M_data_q_57" BEL
+        "display/mod1/spi/M_data_q_56" BEL "display/mod1/spi/M_data_q_55" BEL
+        "display/mod1/spi/M_data_q_54" BEL "display/mod1/spi/M_data_q_53" BEL
+        "display/mod1/spi/M_data_q_52" BEL "display/mod1/spi/M_data_q_51" BEL
+        "display/mod1/spi/M_data_q_50" BEL "display/mod1/spi/M_data_q_49" BEL
+        "display/mod1/spi/M_data_q_48" BEL "display/mod1/spi/M_data_q_47" BEL
+        "display/mod1/spi/M_data_q_46" BEL "display/mod1/spi/M_data_q_45" BEL
         "display/mod1/spi/M_data_q_44" BEL "display/mod1/spi/M_data_q_43" BEL
         "display/mod1/spi/M_data_q_42" BEL "display/mod1/spi/M_data_q_41" BEL
         "display/mod1/spi/M_data_q_40" BEL "display/mod1/spi/M_data_q_39" BEL
@@ -287,82 +129,131 @@ TIMEGRP clk = BEL "game/M_lvls_q_2" BEL "game/M_lvls_q_1" BEL
         "display/mod1/spi/M_data_q_6" BEL "display/mod1/spi/M_data_q_5" BEL
         "display/mod1/spi/M_data_q_4" BEL "display/mod1/spi/M_data_q_3" BEL
         "display/mod1/spi/M_data_q_2" BEL "display/mod1/spi/M_data_q_1" BEL
-        "display/mod1/spi/M_data_q_0" BEL "display/mod1/spi/M_state_q" BEL
-        "display/mod1/spi/M_data_q_63" BEL "display/mod1/spi/M_data_q_62" BEL
-        "display/mod1/spi/M_data_q_61" BEL "display/mod1/spi/M_data_q_60" BEL
-        "display/mod1/spi/M_data_q_59" BEL "display/mod1/spi/M_data_q_58" BEL
-        "display/mod1/spi/M_data_q_57" BEL "display/mod1/spi/M_data_q_56" BEL
-        "display/mod1/spi/M_data_q_55" BEL "display/mod1/spi/M_data_q_54" BEL
-        "display/mod1/spi/M_data_q_53" BEL "display/mod1/spi/M_data_q_52" BEL
-        "display/mod1/spi/M_data_q_51" BEL "display/mod1/spi/M_data_q_50" BEL
-        "display/mod1/spi/M_data_q_49" BEL "display/mod1/spi/M_data_q_48" BEL
-        "display/mod1/spi/M_data_q_47" BEL "display/mod1/spi/M_data_q_46" BEL
-        "display/mod1/spi/M_data_q_45" BEL "display/mod1/M_data_reg_q_10" BEL
-        "display/mod1/M_data_reg_q_11" BEL "display/mod1/M_data_reg_q_22" BEL
-        "display/mod1/M_data_reg_q_17" BEL "display/mod1/M_data_reg_q_23" BEL
+        "display/mod1/spi/M_data_q_0" BEL "display/mod1/M_data_reg_q_10" BEL
+        "display/mod1/M_data_reg_q_11" BEL "display/mod1/M_data_reg_q_23" BEL
         "display/mod1/M_data_reg_q_32" BEL "display/mod1/M_data_reg_q_33" BEL
         "display/mod1/M_data_reg_q_34" BEL "display/mod1/M_data_reg_q_37" BEL
         "display/mod1/M_data_reg_q_38" BEL "display/mod1/M_data_reg_q_39" BEL
         "display/mod1/M_data_reg_q_50" BEL "display/mod1/M_data_reg_q_51" BEL
         "display/mod1/M_data_reg_q_52" BEL "display/mod1/M_data_reg_q_53" BEL
         "display/mod1/M_data_reg_q_48" BEL "display/mod1/M_data_reg_q_54" BEL
-        "display/mod1/M_data_reg_q_1" BEL "display/mod1/M_data_reg_q_4" BEL
-        "display/mod1/M_data_reg_q_5" BEL "display/mod1/M_data_reg_q_8" BEL
-        "display/mod1/M_data_reg_q_9" BEL "display/mod2/M_state_q_FSM_FFd1"
-        BEL "display/mod2/M_state_q_FSM_FFd2" BEL
+        "display/mod1/M_data_reg_q_1" BEL "display/mod1/M_data_reg_q_3" BEL
+        "display/mod1/M_data_reg_q_5" BEL "display/mod1/M_data_reg_q_6" BEL
+        "display/mod1/M_data_reg_q_8" BEL "display/mod1/M_data_reg_q_9" BEL
+        "display/mod2/M_line_q_0" BEL "display/mod2/M_line_q_1" BEL
+        "display/mod2/M_line_q_2" BEL "display/mod2/spi/M_sck_reg_q_8" BEL
+        "display/mod2/spi/M_sck_reg_q_7" BEL "display/mod2/spi/M_sck_reg_q_6"
+        BEL "display/mod2/spi/M_sck_reg_q_5" BEL
+        "display/mod2/spi/M_sck_reg_q_4" BEL "display/mod2/spi/M_sck_reg_q_3"
+        BEL "display/mod2/spi/M_sck_reg_q_2" BEL
+        "display/mod2/spi/M_sck_reg_q_1" BEL "display/mod2/spi/M_sck_reg_q_0"
+        BEL "display/mod2/spi/M_ctr_q_5" BEL "display/mod2/spi/M_ctr_q_4" BEL
+        "display/mod2/spi/M_ctr_q_3" BEL "display/mod2/spi/M_ctr_q_2" BEL
+        "display/mod2/spi/M_ctr_q_1" BEL "display/mod2/spi/M_ctr_q_0" BEL
+        "display/mod2/spi/M_mosi_reg_q" BEL "display/mod2/spi/M_state_q" BEL
+        "display/mod2/spi/M_data_q_63" BEL "display/mod2/spi/M_data_q_62" BEL
+        "display/mod2/spi/M_data_q_61" BEL "display/mod2/spi/M_data_q_60" BEL
+        "display/mod2/spi/M_data_q_59" BEL "display/mod2/spi/M_data_q_58" BEL
+        "display/mod2/spi/M_data_q_57" BEL "display/mod2/spi/M_data_q_56" BEL
+        "display/mod2/spi/M_data_q_55" BEL "display/mod2/spi/M_data_q_54" BEL
+        "display/mod2/spi/M_data_q_53" BEL "display/mod2/spi/M_data_q_52" BEL
+        "display/mod2/spi/M_data_q_51" BEL "display/mod2/spi/M_data_q_50" BEL
+        "display/mod2/spi/M_data_q_49" BEL "display/mod2/spi/M_data_q_48" BEL
+        "display/mod2/spi/M_data_q_47" BEL "display/mod2/spi/M_data_q_46" BEL
+        "display/mod2/spi/M_data_q_45" BEL "display/mod2/spi/M_data_q_44" BEL
+        "display/mod2/spi/M_data_q_43" BEL "display/mod2/spi/M_data_q_42" BEL
+        "display/mod2/spi/M_data_q_41" BEL "display/mod2/spi/M_data_q_40" BEL
+        "display/mod2/spi/M_data_q_39" BEL "display/mod2/spi/M_data_q_38" BEL
+        "display/mod2/spi/M_data_q_37" BEL "display/mod2/spi/M_data_q_36" BEL
+        "display/mod2/spi/M_data_q_35" BEL "display/mod2/spi/M_data_q_34" BEL
+        "display/mod2/spi/M_data_q_33" BEL "display/mod2/spi/M_data_q_32" BEL
+        "display/mod2/spi/M_data_q_31" BEL "display/mod2/spi/M_data_q_30" BEL
+        "display/mod2/spi/M_data_q_29" BEL "display/mod2/spi/M_data_q_28" BEL
+        "display/mod2/spi/M_data_q_27" BEL "display/mod2/spi/M_data_q_26" BEL
+        "display/mod2/spi/M_data_q_25" BEL "display/mod2/spi/M_data_q_24" BEL
+        "display/mod2/spi/M_data_q_23" BEL "display/mod2/spi/M_data_q_22" BEL
+        "display/mod2/spi/M_data_q_21" BEL "display/mod2/spi/M_data_q_20" BEL
+        "display/mod2/spi/M_data_q_19" BEL "display/mod2/spi/M_data_q_18" BEL
+        "display/mod2/spi/M_data_q_17" BEL "display/mod2/spi/M_data_q_16" BEL
+        "display/mod2/spi/M_data_q_15" BEL "display/mod2/spi/M_data_q_14" BEL
+        "display/mod2/spi/M_data_q_13" BEL "display/mod2/spi/M_data_q_12" BEL
+        "display/mod2/spi/M_data_q_11" BEL "display/mod2/spi/M_data_q_10" BEL
+        "display/mod2/spi/M_data_q_9" BEL "display/mod2/spi/M_data_q_8" BEL
+        "display/mod2/spi/M_data_q_7" BEL "display/mod2/spi/M_data_q_6" BEL
+        "display/mod2/spi/M_data_q_5" BEL "display/mod2/spi/M_data_q_4" BEL
+        "display/mod2/spi/M_data_q_3" BEL "display/mod2/spi/M_data_q_2" BEL
+        "display/mod2/spi/M_data_q_1" BEL "display/mod2/spi/M_data_q_0" BEL
+        "display/mod2/M_state_q_FSM_FFd1" BEL
+        "display/mod2/M_state_q_FSM_FFd2" BEL
         "display/mod2/M_state_q_FSM_FFd3" BEL
-        "display/mod2/M_state_q_FSM_FFd4" BEL "display/mod2/M_line_q_0" BEL
-        "display/mod2/M_line_q_1" BEL "display/mod2/M_line_q_2" BEL
-        "display/mod2/spi/M_sck_reg_q_8" BEL "display/mod2/spi/M_sck_reg_q_7"
-        BEL "display/mod2/spi/M_sck_reg_q_6" BEL
-        "display/mod2/spi/M_sck_reg_q_5" BEL "display/mod2/spi/M_sck_reg_q_4"
-        BEL "display/mod2/spi/M_sck_reg_q_3" BEL
-        "display/mod2/spi/M_sck_reg_q_2" BEL "display/mod2/spi/M_sck_reg_q_1"
-        BEL "display/mod2/spi/M_sck_reg_q_0" BEL "display/mod2/spi/M_ctr_q_5"
-        BEL "display/mod2/spi/M_ctr_q_4" BEL "display/mod2/spi/M_ctr_q_3" BEL
-        "display/mod2/spi/M_ctr_q_2" BEL "display/mod2/spi/M_ctr_q_1" BEL
-        "display/mod2/spi/M_ctr_q_0" BEL "display/mod2/spi/M_mosi_reg_q" BEL
-        "display/mod2/spi/M_state_q" BEL "display/mod2/spi/M_data_q_63" BEL
-        "display/mod2/spi/M_data_q_62" BEL "display/mod2/spi/M_data_q_61" BEL
-        "display/mod2/spi/M_data_q_60" BEL "display/mod2/spi/M_data_q_59" BEL
-        "display/mod2/spi/M_data_q_58" BEL "display/mod2/spi/M_data_q_57" BEL
-        "display/mod2/spi/M_data_q_56" BEL "display/mod2/spi/M_data_q_55" BEL
-        "display/mod2/spi/M_data_q_54" BEL "display/mod2/spi/M_data_q_53" BEL
-        "display/mod2/spi/M_data_q_52" BEL "display/mod2/spi/M_data_q_51" BEL
-        "display/mod2/spi/M_data_q_50" BEL "display/mod2/spi/M_data_q_49" BEL
-        "display/mod2/spi/M_data_q_48" BEL "display/mod2/spi/M_data_q_47" BEL
-        "display/mod2/spi/M_data_q_46" BEL "display/mod2/spi/M_data_q_45" BEL
-        "display/mod2/spi/M_data_q_44" BEL "display/mod2/spi/M_data_q_43" BEL
-        "display/mod2/spi/M_data_q_42" BEL "display/mod2/spi/M_data_q_41" BEL
-        "display/mod2/spi/M_data_q_40" BEL "display/mod2/spi/M_data_q_39" BEL
-        "display/mod2/spi/M_data_q_38" BEL "display/mod2/spi/M_data_q_37" BEL
-        "display/mod2/spi/M_data_q_36" BEL "display/mod2/spi/M_data_q_35" BEL
-        "display/mod2/spi/M_data_q_34" BEL "display/mod2/spi/M_data_q_33" BEL
-        "display/mod2/spi/M_data_q_32" BEL "display/mod2/spi/M_data_q_31" BEL
-        "display/mod2/spi/M_data_q_30" BEL "display/mod2/spi/M_data_q_29" BEL
-        "display/mod2/spi/M_data_q_28" BEL "display/mod2/spi/M_data_q_27" BEL
-        "display/mod2/spi/M_data_q_26" BEL "display/mod2/spi/M_data_q_25" BEL
-        "display/mod2/spi/M_data_q_24" BEL "display/mod2/spi/M_data_q_23" BEL
-        "display/mod2/spi/M_data_q_22" BEL "display/mod2/spi/M_data_q_21" BEL
-        "display/mod2/spi/M_data_q_20" BEL "display/mod2/spi/M_data_q_19" BEL
-        "display/mod2/spi/M_data_q_18" BEL "display/mod2/spi/M_data_q_17" BEL
-        "display/mod2/spi/M_data_q_16" BEL "display/mod2/spi/M_data_q_15" BEL
-        "display/mod2/spi/M_data_q_14" BEL "display/mod2/spi/M_data_q_13" BEL
-        "display/mod2/spi/M_data_q_12" BEL "display/mod2/spi/M_data_q_11" BEL
-        "display/mod2/spi/M_data_q_10" BEL "display/mod2/spi/M_data_q_9" BEL
-        "display/mod2/spi/M_data_q_8" BEL "display/mod2/spi/M_data_q_7" BEL
-        "display/mod2/spi/M_data_q_6" BEL "display/mod2/spi/M_data_q_5" BEL
-        "display/mod2/spi/M_data_q_4" BEL "display/mod2/spi/M_data_q_3" BEL
-        "display/mod2/spi/M_data_q_2" BEL "display/mod2/spi/M_data_q_1" BEL
-        "display/mod2/spi/M_data_q_0" BEL "display/mod2/M_data_reg_q_10" BEL
-        "display/mod2/M_data_reg_q_11" BEL "display/mod2/M_data_reg_q_32" BEL
-        "display/mod2/M_data_reg_q_33" BEL "display/mod2/M_data_reg_q_37" BEL
-        "display/mod2/M_data_reg_q_38" BEL "display/mod2/M_data_reg_q_39" BEL
-        "display/mod2/M_data_reg_q_50" BEL "display/mod2/M_data_reg_q_51" BEL
-        "display/mod2/M_data_reg_q_53" BEL "display/mod2/M_data_reg_q_48" BEL
-        "display/mod2/M_data_reg_q_54" BEL "display/mod2/M_data_reg_q_1" BEL
-        "display/mod2/M_data_reg_q_4" BEL "display/mod2/M_data_reg_q_5" BEL
-        "display/mod2/M_data_reg_q_8" BEL "display/mod2/M_data_reg_q_9";
+        "display/mod2/M_state_q_FSM_FFd4" BEL "display/mod2/M_data_reg_q_10"
+        BEL "display/mod2/M_data_reg_q_11" BEL "display/mod2/M_data_reg_q_22"
+        BEL "display/mod2/M_data_reg_q_23" BEL "display/mod2/M_data_reg_q_32"
+        BEL "display/mod2/M_data_reg_q_33" BEL "display/mod2/M_data_reg_q_34"
+        BEL "display/mod2/M_data_reg_q_37" BEL "display/mod2/M_data_reg_q_38"
+        BEL "display/mod2/M_data_reg_q_39" BEL "display/mod2/M_data_reg_q_50"
+        BEL "display/mod2/M_data_reg_q_51" BEL "display/mod2/M_data_reg_q_48"
+        BEL "display/mod2/M_data_reg_q_53" BEL "display/mod2/M_data_reg_q_54"
+        BEL "display/mod2/M_data_reg_q_1" BEL "display/mod2/M_data_reg_q_3"
+        BEL "display/mod2/M_data_reg_q_5" BEL "display/mod2/M_data_reg_q_8"
+        BEL "display/mod2/M_data_reg_q_9" BEL "clk_BUFGP/BUFG" BEL
+        "reset_cond/M_stage_q_3" BEL "reset_cond/M_stage_q_2" BEL
+        "reset_cond/M_stage_q_1" BEL "reset_cond/M_stage_q_0" BEL
+        "game/M_lvls_q_2" BEL "game/M_lvls_q_1" BEL "game/M_lvls_q_0" BEL
+        "game/M_operatorState_q_17" BEL "game/M_operatorState_q_16" BEL
+        "game/M_operatorState_q_15" BEL "game/M_operatorState_q_14" BEL
+        "game/M_operatorState_q_13" BEL "game/M_operatorState_q_12" BEL
+        "game/M_operatorState_q_11" BEL "game/M_operatorState_q_10" BEL
+        "game/M_operatorState_q_9" BEL "game/M_operatorState_q_8" BEL
+        "game/M_operatorState_q_7" BEL "game/M_operatorState_q_6" BEL
+        "game/M_operatorState_q_5" BEL "game/M_operatorState_q_4" BEL
+        "game/M_operatorState_q_3" BEL "game/M_operatorState_q_2" BEL
+        "game/M_operatorState_q_1" BEL "game/M_operatorState_q_0" BEL
+        "game/M_selectState_q_2" BEL "game/M_selectState_q_1" BEL
+        "game/M_selectState_q_0" BEL "game/M_lvls_q_2_1" BEL
+        "game/M_lvls_q_0_1" BEL "game/M_lvls_q_1_1" BEL "game/M_lvls_q_2_2"
+        BEL "game/M_lvls_q_0_2" BEL "game/M_lvls_q_1_2" BEL
+        "game/M_lvls_q_2_3" BEL "game/M_lvls_q_0_3" BEL "game/M_lvls_q_1_3"
+        BEL "game/M_lvls_q_2_4" BEL "game/M_lvls_q_0_4" BEL
+        "game/M_lvls_q_1_4" BEL "game/M_lvls_q_1_5" BEL "game/M_lvls_q_0_5"
+        BEL "game/M_lvls_q_2_5" BEL "game/edge_detector1/M_last_q" BEL
+        "game/edge_detector2/M_last_q" BEL "game/edge_detector3/M_last_q" BEL
+        "game/button_cond1/M_ctr_q_19" BEL "game/button_cond1/M_ctr_q_18" BEL
+        "game/button_cond1/M_ctr_q_17" BEL "game/button_cond1/M_ctr_q_16" BEL
+        "game/button_cond1/M_ctr_q_15" BEL "game/button_cond1/M_ctr_q_14" BEL
+        "game/button_cond1/M_ctr_q_13" BEL "game/button_cond1/M_ctr_q_12" BEL
+        "game/button_cond1/M_ctr_q_11" BEL "game/button_cond1/M_ctr_q_10" BEL
+        "game/button_cond1/M_ctr_q_9" BEL "game/button_cond1/M_ctr_q_8" BEL
+        "game/button_cond1/M_ctr_q_7" BEL "game/button_cond1/M_ctr_q_6" BEL
+        "game/button_cond1/M_ctr_q_5" BEL "game/button_cond1/M_ctr_q_4" BEL
+        "game/button_cond1/M_ctr_q_3" BEL "game/button_cond1/M_ctr_q_2" BEL
+        "game/button_cond1/M_ctr_q_1" BEL "game/button_cond1/M_ctr_q_0" BEL
+        "game/button_cond1/sync/M_pipe_q_1" BEL
+        "game/button_cond1/sync/Mshreg_M_pipe_q_1" BEL
+        "game/button_cond2/M_ctr_q_19" BEL "game/button_cond2/M_ctr_q_18" BEL
+        "game/button_cond2/M_ctr_q_17" BEL "game/button_cond2/M_ctr_q_16" BEL
+        "game/button_cond2/M_ctr_q_15" BEL "game/button_cond2/M_ctr_q_14" BEL
+        "game/button_cond2/M_ctr_q_13" BEL "game/button_cond2/M_ctr_q_12" BEL
+        "game/button_cond2/M_ctr_q_11" BEL "game/button_cond2/M_ctr_q_10" BEL
+        "game/button_cond2/M_ctr_q_9" BEL "game/button_cond2/M_ctr_q_8" BEL
+        "game/button_cond2/M_ctr_q_7" BEL "game/button_cond2/M_ctr_q_6" BEL
+        "game/button_cond2/M_ctr_q_5" BEL "game/button_cond2/M_ctr_q_4" BEL
+        "game/button_cond2/M_ctr_q_3" BEL "game/button_cond2/M_ctr_q_2" BEL
+        "game/button_cond2/M_ctr_q_1" BEL "game/button_cond2/M_ctr_q_0" BEL
+        "game/button_cond2/sync/M_pipe_q_1" BEL
+        "game/button_cond2/sync/Mshreg_M_pipe_q_1" BEL
+        "game/button_cond3/M_ctr_q_19" BEL "game/button_cond3/M_ctr_q_18" BEL
+        "game/button_cond3/M_ctr_q_17" BEL "game/button_cond3/M_ctr_q_16" BEL
+        "game/button_cond3/M_ctr_q_15" BEL "game/button_cond3/M_ctr_q_14" BEL
+        "game/button_cond3/M_ctr_q_13" BEL "game/button_cond3/M_ctr_q_12" BEL
+        "game/button_cond3/M_ctr_q_11" BEL "game/button_cond3/M_ctr_q_10" BEL
+        "game/button_cond3/M_ctr_q_9" BEL "game/button_cond3/M_ctr_q_8" BEL
+        "game/button_cond3/M_ctr_q_7" BEL "game/button_cond3/M_ctr_q_6" BEL
+        "game/button_cond3/M_ctr_q_5" BEL "game/button_cond3/M_ctr_q_4" BEL
+        "game/button_cond3/M_ctr_q_3" BEL "game/button_cond3/M_ctr_q_2" BEL
+        "game/button_cond3/M_ctr_q_1" BEL "game/button_cond3/M_ctr_q_0" BEL
+        "game/button_cond3/sync/M_pipe_q_1" BEL
+        "game/button_cond3/sync/Mshreg_M_pipe_q_1";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

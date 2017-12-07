@@ -7,20 +7,14 @@ Reading design: mojo_top_0.prj
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/pipeline_29.v" into library work
-Parsing module <pipeline_29>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/spi_master_16.v" into library work
 Parsing module <spi_master_16>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/spi_master_15.v" into library work
 Parsing module <spi_master_15>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/spi_master_14.v" into library work
 Parsing module <spi_master_14>.
-Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/edge_detector_17.v" into library work
-Parsing module <edge_detector_17>.
-Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/button_conditioner_18.v" into library work
-Parsing module <button_conditioner_18>.
-Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/operator_button_8.v" into library work
-Parsing module <operator_button_8>.
+Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/pipeline_17.v" into library work
+Parsing module <pipeline_17>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/levels_7.v" into library work
 Parsing module <levels_7>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/led_matrix_6.v" into library work
@@ -29,6 +23,10 @@ Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Mat
 Parsing module <led_matrix_5>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/led_matrix_4.v" into library work
 Parsing module <led_matrix_4>.
+Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/edge_detector_8.v" into library work
+Parsing module <edge_detector_8>.
+Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/button_conditioner_11.v" into library work
+Parsing module <button_conditioner_11>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/reset_conditioner_3.v" into library work
 Parsing module <reset_conditioner_3>.
 Analyzing Verilog file "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/game_2.v" into library work
@@ -68,17 +66,13 @@ Elaborating module <game_2>.
 
 Elaborating module <levels_7>.
 
-Elaborating module <operator_button_8>.
+Elaborating module <edge_detector_8>.
 
-Elaborating module <edge_detector_17>.
+Elaborating module <button_conditioner_11>.
 
-Elaborating module <button_conditioner_18>.
-
-Elaborating module <pipeline_29>.
-WARNING:HDLCompiler:1127 - "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/game_2.v" Line 106: Assignment to M_state_q ignored, since the identifier is never used
+Elaborating module <pipeline_17>.
 
 Elaborating module <reset_conditioner_3>.
-WARNING:HDLCompiler:634 - "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 57: Net <M_display_num[35]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -92,13 +86,12 @@ WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <M_display_num<35:28>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 91
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 91
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 91
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 91
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 91
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 91
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 87
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 87
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 87
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 87
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 87
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 87
     Summary:
 	inferred   6 Tristate(s).
 Unit <mojo_top_0> synthesized.
@@ -311,9 +304,9 @@ INFO:Xst:3210 - "/home/parallels/Documents/Math_Square/work/planAhead/Math_Squar
     Found 8-bit adder for signal <M_line_q[2]_GND_6_o_add_2_OUT> created at line 84.
     Found 6-bit adder for signal <M_line_q[2]_GND_6_o_add_14_OUT> created at line 87.
     Found 3-bit adder for signal <M_line_q[2]_GND_6_o_add_62_OUT> created at line 235.
-    Found 9-bit adder for signal <n0111> created at line 87.
     Found 9-bit adder for signal <n0106> created at line 85.
     Found 9-bit adder for signal <n0108> created at line 86.
+    Found 9-bit adder for signal <n0111> created at line 87.
     Found 511-bit shifter logical right for signal <n0103> created at line 84
     Found 511-bit shifter logical right for signal <n0102> created at line 85
     Found 511-bit shifter logical right for signal <n0101> created at line 86
@@ -409,14 +402,26 @@ Unit <spi_master_16> synthesized.
 
 Synthesizing Unit <game_2>.
     Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/game_2.v".
-WARNING:Xst:647 - Input <buttons<6:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 18-bit register for signal <M_operatorState_q>.
+    Found 6-bit register for signal <M_selectState_q>.
     Found 3-bit register for signal <M_lvls_q>.
-    Found 3-bit adder for signal <M_lvls_q[2]_GND_14_o_add_1_OUT> created at line 92.
-    Found 18-bit comparator equal for signal <M_operator_button6_op[2]_M_levels_op[17]_equal_1_o> created at line 91
+    Found 6-bit subtractor for signal <M_selectState_q[5]_GND_14_o_sub_12_OUT> created at line 104.
+    Found 6-bit adder for signal <M_selectState_q[5]_GND_14_o_add_6_OUT> created at line 95.
+    Found 8-bit adder for signal <n0116> created at line 108.
+    Found 3-bit adder for signal <M_operatorState_q[17]_GND_14_o_add_17_OUT> created at line 108.
+    Found 3-bit adder for signal <M_lvls_q[2]_GND_14_o_add_67_OUT> created at line 117.
+    Found 6x2-bit multiplier for signal <n0201> created at line 108.
+    Found 35-bit shifter logical right for signal <n0117> created at line 108
+    Found 6-bit comparator greater for signal <GND_14_o_M_selectState_q[5]_LessThan_9_o> created at line 97
+    Found 3-bit comparator greater for signal <PWR_9_o_M_operatorState_q[17]_LessThan_44_o> created at line 110
+    Found 18-bit comparator equal for signal <M_operatorState_q[17]_M_levels_op[17]_equal_67_o> created at line 116
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   3 D-type flip-flop(s).
-	inferred   1 Comparator(s).
+	inferred   1 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  64 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
 Unit <game_2> synthesized.
 
 Synthesizing Unit <levels_7>.
@@ -425,40 +430,28 @@ Synthesizing Unit <levels_7>.
 	inferred   2 Multiplexer(s).
 Unit <levels_7> synthesized.
 
-Synthesizing Unit <operator_button_8>.
-    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/operator_button_8.v".
-    Found 3-bit register for signal <M_ctr_q>.
-    Found 3-bit adder for signal <M_ctr_q[2]_GND_16_o_add_2_OUT> created at line 42.
-    Found 3-bit comparator greater for signal <PWR_11_o_M_ctr_q[2]_LessThan_5_o> created at line 44
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   3 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-	inferred   2 Multiplexer(s).
-Unit <operator_button_8> synthesized.
-
-Synthesizing Unit <edge_detector_17>.
-    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/edge_detector_17.v".
+Synthesizing Unit <edge_detector_8>.
+    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/edge_detector_8.v".
     Found 1-bit register for signal <M_last_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <edge_detector_17> synthesized.
+Unit <edge_detector_8> synthesized.
 
-Synthesizing Unit <button_conditioner_18>.
-    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/button_conditioner_18.v".
+Synthesizing Unit <button_conditioner_11>.
+    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/button_conditioner_11.v".
     Found 20-bit register for signal <M_ctr_q>.
-    Found 20-bit adder for signal <M_ctr_q[19]_GND_18_o_add_2_OUT> created at line 39.
+    Found 20-bit adder for signal <M_ctr_q[19]_GND_17_o_add_2_OUT> created at line 39.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
-Unit <button_conditioner_18> synthesized.
+Unit <button_conditioner_11> synthesized.
 
-Synthesizing Unit <pipeline_29>.
-    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/pipeline_29.v".
+Synthesizing Unit <pipeline_17>.
+    Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/pipeline_17.v".
     Found 2-bit register for signal <M_pipe_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <pipeline_29> synthesized.
+Unit <pipeline_17> synthesized.
 
 Synthesizing Unit <reset_conditioner_3>.
     Related source file is "/home/parallels/Documents/Math_Square/work/planAhead/Math_Square/Math_Square.srcs/sources_1/imports/verilog/reset_conditioner_3.v".
@@ -471,58 +464,67 @@ Unit <reset_conditioner_3> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 14
+# Multipliers                                          : 15
  4x3-bit multiplier                                    : 5
  4x4-bit multiplier                                    : 9
-# Adders/Subtractors                                   : 79
- 20-bit adder                                          : 6
- 3-bit adder                                           : 11
+ 6x2-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 73
+ 20-bit adder                                          : 3
+ 3-bit adder                                           : 6
  6-bit adder                                           : 7
+ 6-bit addsub                                          : 1
  7-bit adder                                           : 5
- 8-bit adder                                           : 22
+ 8-bit adder                                           : 23
  9-bit adder                                           : 28
-# Registers                                            : 47
- 1-bit register                                        : 12
- 2-bit register                                        : 6
- 20-bit register                                       : 6
- 3-bit register                                        : 11
+# Registers                                            : 34
+ 1-bit register                                        : 9
+ 18-bit register                                       : 1
+ 2-bit register                                        : 3
+ 20-bit register                                       : 3
+ 3-bit register                                        : 5
  4-bit register                                        : 1
- 6-bit register                                        : 4
+ 6-bit register                                        : 5
  64-bit register                                       : 6
  9-bit register                                        : 1
-# Comparators                                          : 10
+# Comparators                                          : 6
  18-bit comparator equal                               : 1
- 3-bit comparator greater                              : 6
+ 3-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
  64-bit comparator not equal                           : 3
-# Multiplexers                                         : 48
+# Multiplexers                                         : 100
  1-bit 15-to-1 multiplexer                             : 3
- 1-bit 2-to-1 multiplexer                              : 13
- 18-bit 2-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 18
+ 1-bit 2-to-1 multiplexer                              : 34
+ 18-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 3
+ 3-bit 2-to-1 multiplexer                              : 38
  36-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 6
  64-bit 2-to-1 multiplexer                             : 12
-# Logic shifters                                       : 57
+# Logic shifters                                       : 58
  127-bit shifter logical right                         : 3
  179-bit shifter logical right                         : 15
  299-bit shifter logical right                         : 27
+ 35-bit shifter logical right                          : 1
  511-bit shifter logical right                         : 12
 # Tristates                                            : 9
  1-bit tristate buffer                                 : 9
 # FSMs                                                 : 4
 
 =========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
 
-Synthesizing (advanced) Unit <button_conditioner_18>.
+Synthesizing (advanced) Unit <button_conditioner_11>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <button_conditioner_18> synthesized (advanced).
+Unit <button_conditioner_11> synthesized (advanced).
 
 Synthesizing (advanced) Unit <game_2>.
 The following registers are absorbed into counter <M_lvls_q>: 1 register on signal <M_lvls_q>.
+	Multiplier <Mmult_n0201> in block <game_2> and adder/subtractor <Madd_n0116_Madd> in block <game_2> are combined into a MAC<Maddsub_n0201>.
 Unit <game_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <spi_master_14>.
@@ -544,36 +546,43 @@ Unit <spi_master_16> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# MACs                                                 : 1
+ 6x2-to-5-bit MAC                                      : 1
 # Multipliers                                          : 14
  4x3-bit multiplier                                    : 5
  4x4-bit multiplier                                    : 9
-# Adders/Subtractors                                   : 66
- 3-bit adder                                           : 9
+# Adders/Subtractors                                   : 62
+ 3-bit adder                                           : 4
  6-bit adder                                           : 3
+ 6-bit addsub                                          : 1
  7-bit adder                                           : 15
  8-bit adder                                           : 39
-# Counters                                             : 13
- 20-bit up counter                                     : 6
+# Counters                                             : 10
+ 20-bit up counter                                     : 3
  3-bit up counter                                      : 2
  6-bit up counter                                      : 4
  9-bit up counter                                      : 1
-# Registers                                            : 439
- Flip-Flops                                            : 439
-# Comparators                                          : 10
+# Registers                                            : 436
+ Flip-Flops                                            : 436
+# Comparators                                          : 6
  18-bit comparator equal                               : 1
- 3-bit comparator greater                              : 6
+ 3-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
  64-bit comparator not equal                           : 3
-# Multiplexers                                         : 237
+# Multiplexers                                         : 289
  1-bit 15-to-1 multiplexer                             : 3
- 1-bit 2-to-1 multiplexer                              : 205
- 18-bit 2-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 18
+ 1-bit 2-to-1 multiplexer                              : 226
+ 18-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 3
+ 3-bit 2-to-1 multiplexer                              : 38
  36-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 6
  64-bit 2-to-1 multiplexer                             : 9
-# Logic shifters                                       : 57
+# Logic shifters                                       : 58
  127-bit shifter logical right                         : 3
  179-bit shifter logical right                         : 15
  299-bit shifter logical right                         : 27
+ 35-bit shifter logical right                          : 1
  511-bit shifter logical right                         : 12
 # FSMs                                                 : 4
 
@@ -753,27 +762,29 @@ Optimizing unit <led_matrix_6> ...
 Optimizing unit <spi_master_16> ...
 
 Optimizing unit <game_2> ...
-
-Optimizing unit <operator_button_8> ...
+WARNING:Xst:1293 - FF/Latch <M_selectState_q_3> has a constant value of 0 in block <game_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_selectState_q_4> has a constant value of 0 in block <game_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_selectState_q_5> has a constant value of 0 in block <game_2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <display/mod0/M_data_reg_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod1/M_data_reg_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <display/mod2/M_data_reg_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_3> 
-INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_50> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_34> <display/mod2/M_data_reg_q_17> <display/mod2/M_data_reg_q_2> 
-INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod2/M_data_reg_q_3> 
-INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_53> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod2/M_data_reg_q_23> 
+WARNING:Xst:1293 - FF/Latch <game/M_selectState_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game/M_selectState_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <game/M_selectState_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_4> 
+INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_50> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_17> <display/mod2/M_data_reg_q_2> 
 INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_48> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod2/M_data_reg_q_0> 
-INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_54> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_52> <display/mod2/M_data_reg_q_22> <display/mod2/M_data_reg_q_19> <display/mod2/M_data_reg_q_6> 
-INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_22> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod0/M_data_reg_q_19> 
+INFO:Xst:2261 - The FF/Latch <display/mod2/M_data_reg_q_54> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <display/mod2/M_data_reg_q_52> <display/mod2/M_data_reg_q_19> <display/mod2/M_data_reg_q_6> <display/mod2/M_data_reg_q_4> 
+INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_22> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod0/M_data_reg_q_19> <display/mod0/M_data_reg_q_6> 
 INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_34> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod0/M_data_reg_q_17> <display/mod0/M_data_reg_q_2> 
 INFO:Xst:2261 - The FF/Latch <display/mod0/M_data_reg_q_48> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod0/M_data_reg_q_0> 
-INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_2> 
-INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_52> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod1/M_data_reg_q_19> <display/mod1/M_data_reg_q_6> 
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_34> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod1/M_data_reg_q_17> <display/mod1/M_data_reg_q_2> 
+INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_52> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <display/mod1/M_data_reg_q_22> <display/mod1/M_data_reg_q_19> 
 INFO:Xst:2261 - The FF/Latch <display/mod1/M_data_reg_q_48> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <display/mod1/M_data_reg_q_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 40.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 47.
 FlipFlop game/M_lvls_q_0 has been replicated 5 time(s)
 FlipFlop game/M_lvls_q_1 has been replicated 5 time(s)
 FlipFlop game/M_lvls_q_2 has been replicated 5 time(s)
@@ -781,12 +792,9 @@ FlipFlop game/M_lvls_q_2 has been replicated 5 time(s)
 Final Macro Processing ...
 
 Processing Unit <mojo_top_0> :
-	Found 2-bit shift register for signal <game/operator_button6/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button5/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button4/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button3/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button2/button_cond/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <game/operator_button1/button_cond/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <game/button_cond3/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <game/button_cond2/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <game/button_cond1/sync/M_pipe_q_1>.
 INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 Unit <mojo_top_0> processed.
 
@@ -794,10 +802,10 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 485
- Flip-Flops                                            : 485
-# Shift Registers                                      : 6
- 2-bit shift register                                  : 6
+# Registers                                            : 426
+ Flip-Flops                                            : 426
+# Shift Registers                                      : 3
+ 2-bit shift register                                  : 3
 
 =========================================================================
 
@@ -821,7 +829,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 497   |
+clk                                | BUFGP                  | 432   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -832,7 +840,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 12.527ns (Maximum Frequency: 79.826MHz)
+   Minimum period: 13.271ns (Maximum Frequency: 75.350MHz)
    Minimum input arrival time before clock: 3.526ns
    Maximum output required time after clock: 6.949ns
    Maximum combinational path delay: No path found

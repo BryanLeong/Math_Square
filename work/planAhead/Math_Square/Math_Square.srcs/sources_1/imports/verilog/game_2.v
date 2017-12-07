@@ -7,7 +7,7 @@
 module game_2 (
     input rst,
     input clk,
-    input [6:0] buttons,
+    input [2:0] buttons,
     output reg [17:0] op,
     output reg [35:0] num
   );
@@ -15,6 +15,8 @@ module game_2 (
   
   
   integer i;
+  
+  integer j;
   
   reg [2:0] lvl;
   reg [17:0] opTemp;
@@ -27,65 +29,88 @@ module game_2 (
     .op(M_levels_op)
   );
   
+  wire [1-1:0] M_edge_detector1_out;
+  reg [1-1:0] M_edge_detector1_in;
+  edge_detector_8 edge_detector1 (
+    .clk(clk),
+    .in(M_edge_detector1_in),
+    .out(M_edge_detector1_out)
+  );
+  wire [1-1:0] M_edge_detector2_out;
+  reg [1-1:0] M_edge_detector2_in;
+  edge_detector_8 edge_detector2 (
+    .clk(clk),
+    .in(M_edge_detector2_in),
+    .out(M_edge_detector2_out)
+  );
+  wire [1-1:0] M_edge_detector3_out;
+  reg [1-1:0] M_edge_detector3_in;
+  edge_detector_8 edge_detector3 (
+    .clk(clk),
+    .in(M_edge_detector3_in),
+    .out(M_edge_detector3_out)
+  );
+  wire [1-1:0] M_button_cond1_out;
+  reg [1-1:0] M_button_cond1_in;
+  button_conditioner_11 button_cond1 (
+    .clk(clk),
+    .in(M_button_cond1_in),
+    .out(M_button_cond1_out)
+  );
+  wire [1-1:0] M_button_cond2_out;
+  reg [1-1:0] M_button_cond2_in;
+  button_conditioner_11 button_cond2 (
+    .clk(clk),
+    .in(M_button_cond2_in),
+    .out(M_button_cond2_out)
+  );
+  wire [1-1:0] M_button_cond3_out;
+  reg [1-1:0] M_button_cond3_in;
+  button_conditioner_11 button_cond3 (
+    .clk(clk),
+    .in(M_button_cond3_in),
+    .out(M_button_cond3_out)
+  );
   reg [2:0] M_lvls_d, M_lvls_q = 1'h0;
-  localparam PLUS_state = 2'd0;
-  localparam MINUS_state = 2'd1;
-  localparam MUL_state = 2'd2;
-  localparam DIV_state = 2'd3;
-  
-  reg [1:0] M_state_d, M_state_q = PLUS_state;
-  wire [3-1:0] M_operator_button1_op;
-  operator_button_8 operator_button1 (
-    .clk(clk),
-    .rst(rst),
-    .button(buttons[0+0-:1]),
-    .op(M_operator_button1_op)
-  );
-  wire [3-1:0] M_operator_button2_op;
-  operator_button_8 operator_button2 (
-    .clk(clk),
-    .rst(rst),
-    .button(buttons[1+0-:1]),
-    .op(M_operator_button2_op)
-  );
-  wire [3-1:0] M_operator_button3_op;
-  operator_button_8 operator_button3 (
-    .clk(clk),
-    .rst(rst),
-    .button(buttons[2+0-:1]),
-    .op(M_operator_button3_op)
-  );
-  wire [3-1:0] M_operator_button4_op;
-  operator_button_8 operator_button4 (
-    .clk(clk),
-    .rst(rst),
-    .button(buttons[3+0-:1]),
-    .op(M_operator_button4_op)
-  );
-  wire [3-1:0] M_operator_button5_op;
-  operator_button_8 operator_button5 (
-    .clk(clk),
-    .rst(rst),
-    .button(buttons[4+0-:1]),
-    .op(M_operator_button5_op)
-  );
-  wire [3-1:0] M_operator_button6_op;
-  operator_button_8 operator_button6 (
-    .clk(clk),
-    .rst(rst),
-    .button(buttons[5+0-:1]),
-    .op(M_operator_button6_op)
-  );
+  reg [17:0] M_operatorState_d, M_operatorState_q = 1'h0;
+  reg [5:0] M_selectState_d, M_selectState_q = 1'h0;
   
   always @* begin
     M_lvls_d = M_lvls_q;
+    M_selectState_d = M_selectState_q;
+    M_operatorState_d = M_operatorState_q;
     
-    opTemp[0+2-:3] = M_operator_button1_op;
-    opTemp[3+2-:3] = M_operator_button2_op;
-    opTemp[6+2-:3] = M_operator_button3_op;
-    opTemp[9+2-:3] = M_operator_button4_op;
-    opTemp[12+2-:3] = M_operator_button5_op;
-    opTemp[15+2-:3] = M_operator_button6_op;
+    for (j = 1'h0; j < 3'h6; j = j + 1) begin
+      if (M_operatorState_q[(j)*3+2-:3] == 1'h0) begin
+        M_operatorState_d[(j)*3+2-:3] = 1'h1;
+      end
+    end
+    M_button_cond1_in = buttons[0+0-:1];
+    M_button_cond2_in = buttons[1+0-:1];
+    M_button_cond3_in = buttons[2+0-:1];
+    M_edge_detector1_in = M_button_cond1_out;
+    M_edge_detector2_in = M_button_cond2_out;
+    M_edge_detector3_in = M_button_cond3_out;
+    if (M_edge_detector1_out) begin
+      M_selectState_d = M_selectState_q + 1'h1;
+    end
+    if (M_selectState_q > 3'h5) begin
+      M_selectState_d = 1'h0;
+    end
+    if (M_edge_detector2_out) begin
+      if (M_selectState_q == 1'h0) begin
+        M_selectState_d = 3'h5;
+      end else begin
+        M_selectState_d = M_selectState_q - 1'h1;
+      end
+    end
+    if (M_edge_detector3_out) begin
+      M_operatorState_d[(M_selectState_q)*3+2-:3] = M_operatorState_q[(M_selectState_q)*3+2-:3] + 1'h1;
+    end
+    if (M_operatorState_q[(M_selectState_q)*3+2-:3] > 3'h4) begin
+      M_operatorState_d[(M_selectState_q)*3+2-:3] = 1'h1;
+    end
+    opTemp = M_operatorState_q;
     op = opTemp;
     lvl = M_lvls_q;
     if (opTemp == M_levels_op) begin
@@ -97,14 +122,13 @@ module game_2 (
   always @(posedge clk) begin
     if (rst == 1'b1) begin
       M_lvls_q <= 1'h0;
+      M_operatorState_q <= 1'h0;
+      M_selectState_q <= 1'h0;
     end else begin
       M_lvls_q <= M_lvls_d;
+      M_operatorState_q <= M_operatorState_d;
+      M_selectState_q <= M_selectState_d;
     end
-  end
-  
-  
-  always @(posedge clk) begin
-    M_state_q <= M_state_d;
   end
   
 endmodule
