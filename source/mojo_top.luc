@@ -14,6 +14,7 @@ module mojo_top(
     input button1,
     input button2,
     input button3,
+    input button4,
     
     output mosi0,
     output cs0,
@@ -28,7 +29,7 @@ module mojo_top(
   
   sig rst;                  // reset signal
   var i, j, k;
-  sig buttons[3];
+  sig buttons[4];
   
     
   .clk(clk) {
@@ -48,6 +49,7 @@ module mojo_top(
     buttons[0] = button1;
     buttons[1] = button2;
     buttons[2] = button3;
+    buttons[3] = button4;
     
     mosi0 = display.mosi0;
     cs0 = display.cs0;

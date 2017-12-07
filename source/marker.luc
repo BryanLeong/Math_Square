@@ -2,7 +2,7 @@ module marker (
     input clk,
     input rst,
     input num[9][4],
-    input op[6],
+    input op[6][3],
     output results[6]
   ) {
 

@@ -1,8 +1,16 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Dec  7 21:15:15 2017
+Thu Dec  7 23:14:01 2017
 
 drc -z mojo_top_0_routed.ncd mojo_top_0.pcf
 
-DRC detected 0 errors and 0 warnings.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   game/marker/M_state_q_PWR_24_o_Mux_89_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net game/M_edge_detector4_out
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

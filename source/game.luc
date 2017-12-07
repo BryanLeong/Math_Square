@@ -1,17 +1,17 @@
 module game (
   input rst,
   input clk,
-  input buttons[3],
+  input buttons[4],
       
   output op[6][3],
   output num[9][4]
 ) 
 {
   
-var i;
-var j;
-  
-sig lvl[3], opTemp[6][3];
+var i, j;
+sig aluOP[6][3], aluNUM[9][4];
+sig lvl[11];
+sig opTemp[6][3], numTemp[9][4];
 
 .levelSelected(lvl) {  
   levels levels;
@@ -22,56 +22,62 @@ sig lvl[3], opTemp[6][3];
    edge_detector edge_detector1(#RISE(1), #FALL(0)); // detect rising edges
    edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
    edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
+   edge_detector edge_detector4(#RISE(1), #FALL(0)); // detect rising edges
      
    button_conditioner button_cond1;     // button input conditioner
    button_conditioner button_cond2;     // button input conditioner
    button_conditioner button_cond3;     // button input conditioner
+   button_conditioner button_cond4;     // button input conditioner
      
   
   // States  
   .rst(rst) {
-   dff lvls[3](.d(1)); // setting the init state to 1
+   dff lvls[11](.d(1)); // setting the init state to 1
    dff operatorState[6][3];
    dff selectState[6];
-  }
-  	
-  
-    
-    
-  .rst(rst) {
-     //operator_button operator_button1(.button(buttons[0]));  // Button to change the state
-     //operator_button operator_button2(.button(buttons[0]));  // Button to change the state
-     //operator_button operator_button3(.button(buttons[1]));  // Button to change the state
-     //operator_button operator_button4(.button(buttons[1]));  // Button to change the state
-     //operator_button operator_button5(.button(buttons[2]));  // Button to change the state
-     //operator_button operator_button6(.button(buttons[2]));  // Button to change the state
       
-  }
+   .op(aluOP){.num(aluNUM)   {
+     marker marker;  // ALU connection
+      }
+     }
+   }
 }
 
   
 always {
+  lvl = 0;
+    
+  for (i = 0; i < 6; i++)
+    opTemp[i] = 1;
+    
+  numTemp = levels.num;
     
   for (j = 0; j < 6; j++) {
     if (operatorState.q[j] == 0)
         operatorState.d[j] = 1;
   }
+  
+  // Setting the output
+  op = operatorState.q; 
+  num = numTemp;  // Numbers to the level  
     
   // Buttons
   button_cond1.in = buttons[0];            // raw button input
   button_cond2.in = buttons[1];            // raw button input
   button_cond3.in = buttons[2];            // raw button input
+  button_cond4.in = buttons[3];            // raw button input
   edge_detector1.in = button_cond1.out;
   edge_detector2.in = button_cond2.out;
   edge_detector3.in = button_cond3.out;
-  
+  edge_detector4.in = button_cond4.out;
+    
   // Next button
-  if (edge_detector1.out)              // if edge detected
+  if (edge_detector2.out)              // if edge detected
       selectState.d = selectState.q + 1;                // add one to the counter
       if (selectState.q > 5)
         selectState.d = 0;
   // Previous button
-  if (edge_detector2.out)              // if edge detected
+  if (edge_detector1.out)              // if edge detected
       if (selectState.q == 0)
         selectState.d = 5;
       else
@@ -81,24 +87,14 @@ always {
       operatorState.d[selectState.q] = operatorState.q[selectState.q] + 1;
         if (operatorState.q[selectState.q] > 4)
           operatorState.d[selectState.q] = 1;
-  
-  //opTemp[0] = operator_button1.op;
-  //opTemp[1] = operator_button2.op;
-  //opTemp[2] = operator_button3.op;
-  //opTemp[3] = operator_button4.op;
-  //opTemp[4] = operator_button5.op;
-  //opTemp[5] = operator_button6.op;
-  
-  opTemp = operatorState.q;
-  op = opTemp;
-  
-  lvl = lvls.q;
-    
-  if (opTemp == levels.op) {
-    lvls.d = lvls.q + 1;  
-  } 
-    
-  num = levels.num;  // Numbers to the level
-    
+  // Check if correct
+  if (edge_detector4.out)
+      aluOP = operatorState.q;
+      aluNUM = levels.num;
+      if (marker.results == 6b111111) {
+         lvls.d = lvls.q + 1;
+         lvl = lvl + 1;
+         numTemp = levels.num;
+      }   
   }
 }

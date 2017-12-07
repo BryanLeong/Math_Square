@@ -11,7 +11,7 @@
      CPHA = 0
      TRANSMIT_SIZE = MODULES*16
 */
-module spi_master_16 (
+module spi_master_19 (
     input clk,
     input rst,
     input miso,

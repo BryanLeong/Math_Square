@@ -20,6 +20,7 @@ module mojo_top_0 (
     input button1,
     input button2,
     input button3,
+    input button4,
     output reg mosi0,
     output reg cs0,
     output reg sck0,
@@ -39,7 +40,7 @@ module mojo_top_0 (
   integer j;
   integer k;
   
-  reg [2:0] buttons;
+  reg [3:0] buttons;
   
   wire [1-1:0] M_display_mosi0;
   wire [1-1:0] M_display_cs0;
@@ -88,6 +89,7 @@ module mojo_top_0 (
     buttons[0+0-:1] = button1;
     buttons[1+0-:1] = button2;
     buttons[2+0-:1] = button3;
+    buttons[3+0-:1] = button4;
     mosi0 = M_display_mosi0;
     cs0 = M_display_cs0;
     sck0 = M_display_sck0;
@@ -106,9 +108,7 @@ module mojo_top_0 (
     M_display_num[24+0+3-:4] = M_game_num[24+3-:4];
     M_display_num[24+4+3-:4] = M_game_num[28+3-:4];
     M_display_num[24+8+3-:4] = M_game_num[32+3-:4];
-    for (i = 1'h0; i < 3'h6; i = i + 1) begin
-      M_display_op[(i)*3+2-:3] = M_game_op[(i)*3+2-:3];
-    end
+    M_display_op = M_game_op;
     M_reset_cond_in = ~rst_n;
     rst = M_reset_cond_out;
     spi_miso = 1'bz;

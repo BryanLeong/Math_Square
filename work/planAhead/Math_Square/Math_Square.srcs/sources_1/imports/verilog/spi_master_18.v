@@ -11,7 +11,7 @@
      CPHA = 0
      TRANSMIT_SIZE = MODULES*16
 */
-module spi_master_14 (
+module spi_master_18 (
     input clk,
     input rst,
     input miso,
@@ -24,7 +24,7 @@ module spi_master_14 (
     output reg busy
   );
   
-  localparam CLK_DIV = 2'h3;
+  localparam CLK_DIV = 3'h6;
   localparam CPOL = 1'h0;
   localparam CPHA = 1'h0;
   localparam TRANSMIT_SIZE = 8'h40;
@@ -35,7 +35,7 @@ module spi_master_14 (
   
   reg M_state_d, M_state_q = IDLE_state;
   reg [63:0] M_data_d, M_data_q = 1'h0;
-  reg [2:0] M_sck_reg_d, M_sck_reg_q = 1'h0;
+  reg [5:0] M_sck_reg_d, M_sck_reg_q = 1'h0;
   reg M_mosi_reg_d, M_mosi_reg_q = 1'h0;
   reg [5:0] M_ctr_d, M_ctr_q = 1'h0;
   
@@ -49,7 +49,7 @@ module spi_master_14 (
     new_data = 1'h0;
     busy = M_state_q != IDLE_state;
     data_out = M_data_q;
-    sck = ((1'h0 ^ M_sck_reg_q[2+0-:1]) & (M_state_q == TRANSFER_state)) ^ 1'h0;
+    sck = ((1'h0 ^ M_sck_reg_q[5+0-:1]) & (M_state_q == TRANSFER_state)) ^ 1'h0;
     mosi = M_mosi_reg_q;
     
     case (M_state_q)
@@ -66,10 +66,10 @@ module spi_master_14 (
         if (M_sck_reg_q == 1'h0) begin
           M_mosi_reg_d = M_data_q[63+0-:1];
         end else begin
-          if (M_sck_reg_q == 2'h3) begin
+          if (M_sck_reg_q == 5'h1f) begin
             M_data_d = {M_data_q[0+62-:63], miso};
           end else begin
-            if (M_sck_reg_q == 3'h7) begin
+            if (M_sck_reg_q == 6'h3f) begin
               M_ctr_d = M_ctr_q + 1'h1;
               if (M_ctr_q == 9'h03f) begin
                 M_state_d = IDLE_state;

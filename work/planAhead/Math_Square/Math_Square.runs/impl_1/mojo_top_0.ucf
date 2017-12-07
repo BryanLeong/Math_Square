@@ -38,6 +38,9 @@ NET "button2" PULLUP;
 NET "button3" LOC = P115;
 NET "button3" IOSTANDARD = LVTTL;
 NET "button3" PULLUP;
+NET "button4" LOC = P111;
+NET "button4" IOSTANDARD = LVTTL;
+NET "button4" PULLUP;
 
 ####################################################################################
 # Constraints from file : 'mojo.ucf'

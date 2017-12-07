@@ -50,7 +50,7 @@ module led_matrix_6 (
   reg [1-1:0] M_spi_miso;
   reg [1-1:0] M_spi_start;
   reg [64-1:0] M_spi_data_in;
-  spi_master_16 spi (
+  spi_master_19 spi (
     .clk(clk),
     .rst(rst),
     .miso(M_spi_miso),
