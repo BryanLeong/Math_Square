@@ -58,8 +58,8 @@ module led_matrix #(
           state.d = state.SET_INTENSITY;
         }
       state.SET_INTENSITY:
-        data_reg.d = MODULESx{16h0A00};
-        if (data_reg.q != MODULESx{16h0A00}) {
+        data_reg.d = MODULESx{16h0A0F};
+        if (data_reg.q != MODULESx{16h0A0F}) {
           spi.start = 1;
         } else if (!spi.busy) {
           state.d = state.SET_SCANLIMIT;
